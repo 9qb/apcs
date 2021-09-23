@@ -1,0 +1,48 @@
+0. "base" in "base-x nmber system" refers to the number of unique digits used to represent a value. For example, base-2 means that there are 2 unique digits. These 2 unique digits are used to encode a certain value or signal. 
+
+1. Binary is a base-2 number system, consisting of 2 unique digits (0s and 1s). Binary is the number system used by computers. Binary's simplicity allows a computer to store data since a computer is only capable of storing two states, OFF and ON, respectively. 
+
+2. Binary -> Decimal
+
+2.0. Use a for loop to iterate through the array (the binary value), starting from the rightmost digit. The binary number will be treated as an array. 
+2.1. Multiply the rightmost digit by 2^0. For every digit to the left, multiply the 	digit by 2^n, in which consecutive n is one greater than that of the previous exponent. This process, or loop, will continue until we reach the leftmost digit. 
+2.2. While the loop is iterating, there should be an accumulator for the sum of the decimal numbers. The accumulator is the final decimal number. 
+
+Example:
+	1010
+	0 * 2^0 = 0
+	1 * 2^1 = 2
+	0 * 2^2 = 0
+	1 * 2^3 = 8
+	0 + 2 + 0 + 8 = 10
+	
+	11101
+	1 * 2^0 = 1
+	0 * 2^1 = 0
+	1 * 2^2 = 4
+	1 * 2^3 = 8
+	1 * 2^4 = 16
+	1 + 0 + 4 + 8 + 16 = 29
+
+3. Decimal -> Binary
+
+3.0. Divide the decimal number by 2 once. 
+3.1. Record the remainder (either 0 or 1) in an array.
+3.2. Repeat steps 0 and 1 with the resulting quotients until the final quotient is 0.
+3.4. Return the array and rearrange the array so that the remainders are in reverse order of the direction in which they were stored.
+
+Example: 
+	10
+	10 / 2 = 5r0
+	5 / 2 = 2r1
+	2 / 2 = 1r0
+	1 / 2 = 0r1
+	1010
+	
+	29
+	29 / 2 = 14r1
+	14 / 2 = 7r0
+	7 / 2 = 3r1
+	3 / 2 = 1r1
+	1 / 2 = 0r1
+	11101
