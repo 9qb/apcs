@@ -3,7 +3,7 @@ APCS
 HW03 -- Codify the Revisions
 2021-09-23
 
-0. "base" in "base-x nmber system" refers to the number of unique digits used to represent a value. For example, base-2 means that there are 2 unique digits. These 2 unique digits are used to encode a certain value or signal. 
+0. "base" in "base-x number system" refers to the number of unique digits used to represent a value. For example, base-2 means that there are 2 unique digits. These 2 unique digits are used to encode a certain value or signal. 
 
 1. Binary is a base-2 number system, consisting of 2 unique digits (0s and 1s). Binary is the number system used by computers. Binary's simplicity allows a computer to store data since a computer is only capable of storing two states, OFF and ON, respectively. 
 
