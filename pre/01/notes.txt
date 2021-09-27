@@ -1,1 +1,7 @@
+/* Giant Pandas (Brian Li, Melody Lew, Weichen Liu)
+APCS
+HW05 -- SummerHW01
+2021-09-27
+*/
 
+There is really nothing to say about this part of the homework. We just got everything in order. 
