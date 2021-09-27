@@ -1,1 +1,7 @@
+/* Giant Pandas (Brian Li, Melody Lew, Weichen Liu)
+APCS
+HW05 -- SummerHW03
+2021-09-27
+*/
 
+We just followed the flow of the algorithm and knowing that system.out.println allows the next thing printed to be on a new line, this was fairly simple. I was initially tripped up on System.out.println and System.out.print, but I figured it out.
