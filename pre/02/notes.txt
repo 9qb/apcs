@@ -1,1 +1,7 @@
+/* Giant Pandas (Brian Li, Melody Lew, Weichen Liu)
+APCS
+HW05 -- SummerHW02
+2021-09-27
+*/
 
+Our code worked fine since we typed all of the parts of the code correctly. We also got comfortable using strings in Java, as well as incorporating comments into our program. You can print statements that are different types, but you cannot have arrays with different types. 
