@@ -1,1 +1,7 @@
+/* Giant Pandas (Brian Li, Melody, Weichen Liu)
+APCS
+HW05 -- SummerHW07
+2021-09-27
+*/
 
+The sieve function was pretty confusing, but when we figured out that we could just use 2 for loops, one going through all the numbers in the array, and one crossing out the prime numbers, the task was pretty simple. Personally, the sieve took BY FAR the longest time for me to code. The pseudocode was very hard to understand for me.
