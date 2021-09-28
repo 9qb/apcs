@@ -1,1 +1,9 @@
+/* Giant Pandas (Brian Li, Melody Lew, Weichen Liu)
+APCS
+HW05 -- SummerHW04
+2021-09-27
+*/
 
+
+We just noted how useful these conditionals would be for the future. Java has many types of operators such as relational and logic. 
+Java conditional statements are similar to Python conditional statements. In Java, you can use chaining and nesting to join several conditonal statements, which is a lot more tedious than in Python.
