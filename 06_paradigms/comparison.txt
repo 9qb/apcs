@@ -1,1 +1,27 @@
+Giant Pandas (Brian Li, Melody Lew, Weichen Liu)
+APCS
+HW06 -- paradigms
+2021-09-28
+
+Racket: 
+
+#lang racket
+(display "Hello, world!")
+
+NetLogo:
+
+to helloWorld
+  print "Hello, world!"
+end
+
+Python:
+
+print("Hello, world!")
+
+
+Similarities:
+All of them contain Hello World enclosed in quotations. Their respective functions (display, print, and print, respectively,) all serve the same purpose within a program. That is, to display a message on the screen.
+
+Differences:
+The syntax is different. The print function is inside the parentheses for Racket, but outside for Python. NetLogo does not even have parentheses. NetLogo seems to be the most complicated because you have to make a whole method to print "Hello, world!".
 
