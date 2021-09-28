@@ -1,1 +1,7 @@
+/* Giant Pandas (Brian Li, Melody, Weichen Liu)
+APCS
+HW05 -- SummerHW06
+2021-09-27
+*/
 
+We mainly use loop to iterate through an array, or just to do repeated tasks that go in a pattern. For example, if we wanted to print 1, 2, 3, 4, 5, we could use a for loop and make the counter greater every time and print it. 
