@@ -1,1 +1,8 @@
+/* Giant Pandas (Brian Li, Melody Lew, Weichen Liu)
+APCS
+HW05 -- SummerHW05
+2021-09-27
+*/
 
+
+We used conditional statements and the instructions to figure out how we would set up the algoritms to print what we want. We also utilized the relational and logic operators. I liked chaining conditional statements because it was easier for me to follow and, in my opinion, is more aesthetically pleasing.
