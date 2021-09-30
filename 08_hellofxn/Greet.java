@@ -1,4 +1,4 @@
-// Brian Li
+// Giant Lotus -- Brian Li, Ryan Lau, Weichen Liu
 // APCS
 // HW08 -- Basic printed greetings!
 // 2021-09-29
