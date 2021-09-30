@@ -1,10 +1,26 @@
 // Brian Li
 // APCS
-// HW07 -- Basic printed greetings!
+// HW08 -- Basic printed greetings!
 // 2021-09-29
 
+/*
+DISCOVERIES
+ 0. If you update Greet.java, you have to re-javac Greet.java so that java Greet runs the updated Greet.java.
+
+UNRESOLVED QUESTIONS
+ 0. Are we supposed to randomly pick 1 of the 3 hardcoded persons to greet?
+
+*/
+
 public class Greet{
+
+  public static void greet(String str){
+    System.out.println("Why, hello there, " + str + ". How do you do?");
+  }
+
   public static void main(String[] args){
-    System.out.println("No hablo queso");
+    greet("Test");
+    greet("Foo");
+    greet("Moo");
   }
 }
