@@ -12,7 +12,7 @@ UNRESOLVED QUESTIONS
 
 public class BigSib{
 
-  public static void Greet(string str){
+  public static void Greet(String str){
     System.out.println("Why, hello there, " + str + ". How do you do?");
     
   }
