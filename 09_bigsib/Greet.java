@@ -5,7 +5,7 @@
 
 /*
 DISCOVERIES
- 0. You can't compile Greet.java without first compiling BigSib.java, because the code of Greet.java refers to elements of BigSib.
+ 0. You can't compile Greet.java without first compiling BigSib.java, because the code of Greet.java refers to elements of BigSib. If BigSib.class is not present, compiling Greet.java will also compile BigSib.java.
 UNRESOLVED QUESTIONS
 */
 
