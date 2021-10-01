@@ -1,7 +1,7 @@
-// Giant Lotus -- Brian Li, Ryan Lau, Weichen Liu
+// Giant Pandas -- Brian Li, Weichen Liu, Melody Lew
 // APCS
-// HW08 -- Basic printed greetings!
-// 2021-09-30
+// HW09 -- BigSibs and Greetings
+// 2021-10-01
 
 /*
 DISCOVERIES
