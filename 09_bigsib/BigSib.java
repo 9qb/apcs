@@ -10,12 +10,10 @@ UNRESOLVED QUESTIONS
  0. Are we supposed to randomly pick 1 of the 3 hardcoded persons to greet?
 */
 
-import BigSib
+public class BigSib{
 
-public class Greet {
-    public static void main( String[] args ) {
-        BigSib.greet("Flim");
-        BigSib.greet("Flam");
-        BigSib.greet("Kazaam");
-    }
+  public static void Greet(string str){
+    System.out.println("Why, hello there, " + str + ". How do you do?");
+    
+  }
 }
