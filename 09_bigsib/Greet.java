@@ -10,7 +10,7 @@ UNRESOLVED QUESTIONS
  0. Are we supposed to randomly pick 1 of the 3 hardcoded persons to greet?
 */
 
-import BigSib
+import BigSib;
 
 public class Greet {
     public static void main( String[] args ) {
