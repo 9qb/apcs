@@ -1,13 +1,12 @@
-// Giant Lotus -- Brian Li, Ryan Lau, Weichen Liu
+// Giant Pandas -- Brian Li, Weichen Liu, Melody Lew
 // APCS
-// HW08 -- Basic printed greetings!
-// 2021-09-30
+// HW09 -- BigSibs and Greetings
+// 2021-10-01
 
 /*
 DISCOVERIES
- 0. If you update Greet.java, you have to re-javac Greet.java so that java Greet runs the updated Greet.java.
+ 0. You can't compile Greet.java without first compiling BigSib.java, because the code of Greet.java refers to elements of BigSib.
 UNRESOLVED QUESTIONS
- 0. Are we supposed to randomly pick 1 of the 3 hardcoded persons to greet?
 */
 
 public class Greet {
