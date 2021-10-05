@@ -1,7 +1,7 @@
-// Giant Pandas -- Brian Li, Weichen Liu, Melody Lew, Robert, Blueface, Ollie
+// Dynamic Duo of Destiny -- Brian Li, Kaitlin Ho, Robert, Apple
 // APCS
-// HW10 -- Refactor Big Sib One
-// 2021-10-04
+// HW12 -- On Elder Individuality and the Elimination of Radio Fuzz
+// 2021-10-05
 
 /*
 DISCOVERIES
@@ -11,10 +11,15 @@ UNRESOLVED QUESTIONS
  0. In the case that we are returning a String, like "17", and want to turn it into an integer, how would we do that?
 */
 
-public class BigSib{
+public class Greet {
+  public static void main( String[] args ) {
+    String greeting;
 
-  public static String greet(String str){
-    return("Why, hello there, " + str + ". How do you do?");
-    
-  }
-}
+    BigSib richard = new BigSib();
+    richard.setHelloMsg("Word up");
+
+    greeting = richard.greet("freshman");
+    System.out.println(greeting);
+
+  } //end main()
+} //end Greet
