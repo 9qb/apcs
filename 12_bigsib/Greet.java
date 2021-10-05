@@ -1,7 +1,7 @@
-// Giant Pandas -- Brian Li, Weichen Liu, Melody Lew, Robert, Blueface, Ollie
+// Dynamic Duo of Destiny -- Brian Li, Kaitlin Ho, Robert, Apple
 // APCS
-// HW10 -- Refactor Big Sib One
-// 2021-10-04
+// HW12 -- On Elder Individuality and the Elimination of Radio Fuzz
+// 2021-10-05
 
 /*
 DISCOVERIES
