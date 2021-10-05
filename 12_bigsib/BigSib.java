@@ -11,15 +11,10 @@ UNRESOLVED QUESTIONS
  0. In the case that we are returning a String, like "17", and want to turn it into an integer, how would we do that?
 */
 
-public class Greet {
-  public static void main( String[] args ) {
-    String greeting;
+public class BigSib{
 
-    BigSib richard = new BigSib();
-    richard.setHelloMsg("Word up");
-
-    greeting = richard.greet("freshman");
-    System.out.println(greeting);
-
-  } //end main()
-} //end Greet
+  public static String greet(String str){
+    return("Why, hello there, " + str + ". How do you do?");
+    
+  }
+}
