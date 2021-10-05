@@ -14,7 +14,7 @@ UNRESOLVED QUESTIONS
 public class BigSib{
  String helloMsg;
  
-  public static String greet(String name){
+  public String greet(String name){
     return(helloMsg + " " + name);
   }
  
