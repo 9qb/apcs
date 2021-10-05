@@ -13,8 +13,8 @@ UNRESOLVED QUESTIONS
 
 public class BigSib{
  
-  public static String greet(String str){
-    return("Why, hello there, " + str + ". How do you do?");
+  public static String greet(String name){
+    return(str);
   }
  
   public static void setHelloMsg(String helloMsg){
