@@ -5,7 +5,7 @@
 
 /*
 DISCOVERIES
- 0. When we create variable richard of type BigSib, rihard is able to use all of the methods associated with the class BigSib, such as setHelloMsg and greet, in the form variableName/className.method().
+ 0. When we create variable richard of type BigSib, richard is able to use all of the methods associated with the class BigSib, such as setHelloMsg and greet, in the form variableName/className.method().
  1. A static method is unable to reference instance variables. That is, the method is incapable of referencing variables outside of its own class. To remedy this, remove static from the class construction.
     
 UNRESOLVED QUESTIONS
