@@ -18,7 +18,7 @@ public class BigSib{
   }
  
   public static void setHelloMsg(String helloMsg){
-   System.out.print(helloMsg);
+   System.out.print(helloMsg + " ");
   }
  
 }
