@@ -1,0 +1,6 @@
+hw12 -- 10/5/21
+error: non-static variable helloMsg cannot be referenced from a static context
+   helloMsg = msg;
+   ^
+
+a static method is unable to refer to instance variables.
