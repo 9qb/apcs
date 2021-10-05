@@ -12,13 +12,14 @@ UNRESOLVED QUESTIONS
 */
 
 public class BigSib{
+ String helloMsg;
  
   public static String greet(String name){
-    return(name);
+    return(helloMsg + " " + name);
   }
  
-  public static void setHelloMsg(String helloMsg){
-   System.out.print(helloMsg + " ");
+  public static void setHelloMsg(String msg){
+   helloMsg = msg;
   }
  
 }
