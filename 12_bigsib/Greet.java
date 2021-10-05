@@ -12,9 +12,14 @@ UNRESOLVED QUESTIONS
 */
 
 public class Greet {
-    public static void main( String[] args ){
-        System.out.println( BigSib.greet("Crosby") );
-        System.out.println( BigSib.greet("Stills") );
-        System.out.println( BigSib.greet("Nash") );
-    }
-}
+  public static void main( String[] args ) {
+    String greeting;
+
+    BigSib richard = new BigSib();
+    richard.setHelloMsg("Word up");
+
+    greeting = richard.greet("freshman");
+    System.out.println(greeting);
+
+  } //end main()
+} //end Greet
