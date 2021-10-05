@@ -5,10 +5,11 @@
 
 /*
 DISCOVERIES
- 0. By changing the "void" in a method to "String", we are indicating what type of value we want this method to return. If it returns void, then nothing will be returned in the event that this method is called. 
+ 0. When we create variable richard of type BigSib, rihard is able to use all of the methods associated with the class BigSib, such as setHelloMsg and greet, in the form variableName/className.method().
+ 1. A static method is unable to reference instance variables. That is, the method is incapable of referencing variables outside of its own class. To remedy this, remove static from the class construction.
     
 UNRESOLVED QUESTIONS
- 0. In the case that we are returning a String, like "17", and want to turn it into an integer, how would we do that?
+ 0. When creating a variable of a class type, what happens if you put something within the parentheses of the class (e.g. BigSib richard = new BigSib();)? What does that affect?
 */
 
 public class BigSib{
