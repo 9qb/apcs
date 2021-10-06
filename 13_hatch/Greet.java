@@ -1,7 +1,7 @@
-// Dynamic Duo of Destiny -- Brian Li, Kaitlin Ho, Robert, Apple
+// BestDuo -- Brian Li, Kaitlin Ho, Robert, Apple
 // APCS
-// HW12 -- On Elder Individuality and the Elimination of Radio Fuzz
-// 2021-10-05
+// HW13 -- Where do BigSibs Come From?
+// 2021-10-06
 
 /*
 DISCO
