@@ -16,7 +16,7 @@ public class BigSib{
  
   // constructor
   public BigSib(String msg){
-   helloMsg = msg;
+   String helloMsg = msg;
   }
  
   // methods
