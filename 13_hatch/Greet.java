@@ -23,19 +23,19 @@ public class Greet {
     System.out.println(greeting);
    
     // Salutations Dr. Spaceman
-    richard = new BigSib("Salutations");
+    richard = BigSib("Salutations");
    
     greeting = richard.greet("Dr. Spaceman");
     System.out.println(greeting);
    
     // Hey ya King Fooey
-    richard = new BigSib("Hey ya");
+    richard = BigSib("Hey ya");
    
     greeting = richard.greet("King Fooey");
     System.out.println(greeting);
    
     // Sup mom
-    richard = new BigSib("Sup");
+    richard = BigSib("Sup");
    
     greeting = richard.greet("mom");
     System.out.println(greeting);
