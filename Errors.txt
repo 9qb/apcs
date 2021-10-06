@@ -4,3 +4,10 @@ error: non-static variable helloMsg cannot be referenced from a static context
    ^
 
 a static method is unable to refer to instance variables.
+
+hw13 -- 10/6/21
+Greet.java:26: error: cannot find symbol                                                                                    
+richard = BigSib("Salutations");                                                                                                                                         symbol:   method BigSib(String)                                                                                         
+location: class Greet
+
+if new is not included, it is attempting to look for a symbol, which results in an error.
