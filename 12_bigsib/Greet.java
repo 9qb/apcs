@@ -15,33 +15,30 @@ QCC
 public class Greet {
   public static void main( String[] args ) {
     String greeting;
+    BigSib richard = new BigSib();
 
     // Word up freshman
-    BigSib richard = new BigSib();
     richard.setHelloMsg("Word up");
 
     greeting = richard.greet("freshman");
     System.out.println(greeting);
    
     // Salutations Dr. Spaceman
-    BigSib bezos = new BigSib();
-    bezos.setHelloMsg("Salutations");
+    richard.setHelloMsg("Salutations");
    
-    greeting = bezos.greet("Dr. Spaceman");
+    greeting = richard.greet("Dr. Spaceman");
     System.out.println(greeting);
    
     // Hey ya King Fooey
-    BigSib royalty = new BigSib();
-    royalty.setHelloMsg("Hey ya");
+    richard.setHelloMsg("Hey ya");
    
-    greeting = royalty.greet("King Fooey");
+    greeting = richard.greet("King Fooey");
     System.out.println(greeting);
    
     // Sup mom
-    BigSib momma = new BigSib();
-    momma.setHelloMsg("Sup");
+    richard.setHelloMsg("Sup");
    
-    greeting = momma.greet("mom");
+    greeting = richard.greet("mom");
     System.out.println(greeting);
 
   } //end main()
