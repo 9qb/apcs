@@ -5,11 +5,11 @@
 
 /*
 DISCO
- 0. When we create variable richard of type BigSib, richard is able to use all of the methods associated with the class BigSib, such as setHelloMsg and greet, in the form variableName/className.method().
- 1. A static method is unable to reference instance variables. That is, the method is incapable of referencing variables outside of its own class. To remedy this, remove static from the class construction.
+ 0. When assigning new <ClassName>() to the same variable again, it resets the class instance to its original state. 
+ 1. A constructor can accept arguments, similar to a method. The arguments can be supplied when initializing an instance of a class within the parentheses.
     
 QCC
- 0. When creating a variable of a class type, what happens if you put something within the parentheses of the class (e.g. BigSib richard = new BigSib();)? What does that affect?
+ 0. Why is it necessary for the constructor to be public? And why does it have to be the same name of the class?
 */
 
 public class Greet {
