@@ -13,10 +13,11 @@ QCC
 */
 
 public class BigSib{
+  String helloMsg;
  
   // constructor
   public BigSib(String msg){
-   String helloMsg = msg;
+   helloMsg = msg;
   }
  
   // methods
