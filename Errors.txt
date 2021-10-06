@@ -10,4 +10,4 @@ Greet.java:26: error: cannot find symbol
 richard = BigSib("Salutations");                                                                                                                                         symbol:   method BigSib(String)                                                                                         
 location: class Greet
 
-if new is not included, it is attempting to look for a symbol, which results in an error.
+the variable is not present. initialize the variable first.
