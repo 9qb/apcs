@@ -1,7 +1,7 @@
-// BestDuo -- Brian Li, Kaitlin Ho, Robert, Apple
+// Tiger -- Brian Li, Josiah Moltz, Jing Feng, Robert, Hedwig, Biscuit
 // APCS
-// HW13 -- Where do BigSibs Come From?
-// 2021-10-06
+// HW14 -- Customize Your Creation
+// 2021-10-07
 
 /*
 DISCO
@@ -15,11 +15,16 @@ QCC
 public class BigSib{
   String helloMsg;
  
-  // constructor
+  // used for defcon
+  public BigSib(){
+    helloMsg = "Hello";
+  }
+
+  // used for overcon
   public BigSib(String msg){
    helloMsg = msg;
   }
- 
+
   // methods
   public String greet(String name){
     return(helloMsg + " " + name);
