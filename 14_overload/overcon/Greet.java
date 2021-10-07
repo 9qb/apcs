@@ -1,7 +1,7 @@
-// BestDuo -- Brian Li, Kaitlin Ho, Robert, Apple
+// Tiger -- Brian Li, Josiah Moltz, Jing Feng, Robert, Hedwig, Biscuit
 // APCS
-// HW13 -- Where do BigSibs Come From?
-// 2021-10-06
+// HW14 -- Customize Your Creation
+// 2021-10-07
 
 /*
 DISCO
@@ -19,14 +19,13 @@ public class Greet {
     BigSib grizz = new BigSib("Salutations");
     BigSib dotCom = new BigSib("Hey ya");
     BigSib tracy = new BigSib("Sup");
-
     greeting = richard.greet("freshman");
     System.out.println(greeting);
-    greeting = richard.greet("Dr. Spaceman");
+    greeting = tracy.greet("Dr. Spaceman");
     System.out.println(greeting);
-    greeting = richard.greet("King Fooey");
+    greeting = grizz.greet("King Fooey");
     System.out.println(greeting);
-    greeting = richard.greet("mom");
+    greeting = dotCom.greet("mom");
     System.out.println(greeting);
   } //end main()
 } //end Greet
