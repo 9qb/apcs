@@ -1,7 +1,7 @@
-// BestDuo -- Brian Li, Kaitlin Ho, Robert, Apple
+// Tiger -- Brian Li, Josiah Moltz, Jing Feng, Robert, Hedwig, Biscuit
 // APCS
-// HW13 -- Where do BigSibs Come From?
-// 2021-10-06
+// HW14 -- Customize Your Creation
+// 2021-10-07
 
 /*
 DISCO
