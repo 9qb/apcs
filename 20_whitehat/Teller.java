@@ -1,8 +1,29 @@
+/*
+ * Geese: Weichen Liu + Blueface, Anthony Sun + Corn, Brian Li + Robert
+ * APCS
+ * HW20 -- breaking other's code
+ * 2021-10-19
+ */
+
+/*
+ * DISCO:
+ * You have to typecast numbers (ints) to short to run a method that accepts a short value.
+ * If you withdraw a negative amount, you are adding money to that account.
+ *
+ * QCC:
+ * Is it possible to typecast an int to short after taking the int in?
+ * 
+ * What operations are possible from BankAccount's main() but not Teller's?
+   * You can change the values of the private instance variables in BankAccount but not in Teller. 
+ *
+ */
+
+
 public class Teller {
 	public static void main(String[] args) {
 		BankAccount tester = new BankAccount();
 		
-		System.out.println("Testing intended functionality.");
+		System.out.println("TESTING INTENDED FUNCTIONALITY.");
 		System.out.println("Testing setName(\"Geese\"): " + tester.setName("Geese"));
 		System.out.println("Testing setName(\"Goose\"): " + tester.setName("Goose"));
 		System.out.println("The above shows intended functionality.\n");
@@ -34,7 +55,18 @@ public class Teller {
 		System.out.println("Testing authenticate(args) with incorrect credentials: " + tester.authenticate(123456789,"12345123")); 
 		System.out.println("The above shows intended functionality.\n");
 
-
+		System.out.println("TESTING UNINTENDED FUNCTIONALITY - BREAKING CODE");
+		System.out.println("Testing deposit(-1000). ");
+		tester.deposit(-1000);
+		System.out.println(tester.toString());
+		System.out.println("The above shows unintended functionality. You cannot deposit a negative value.\n");
+	
+		System.out.println("Testing withdraw(-2000): " + tester.withdraw(-2000));
+		System.out.println(tester.toString());
+		System.out.println("The above shows unintended functionaltiy. You cannot withdraw a negative value.");
+		/* These throw errors:
+		 * tester.setPin(1000);
+		 */
 
 
 
