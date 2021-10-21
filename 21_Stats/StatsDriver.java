@@ -22,25 +22,25 @@ public class StatsDriver {
 		System.out.print(Stats.max(5,1));
 		System.out.println("....should be 5");
 		System.out.print(Stats.max(5.3,1.1));
-    System.out.println("...should be 5.3");
+    		System.out.println("...should be 5.3");
 		System.out.print(Stats.geoMean(4,9));
 		System.out.println("...should be 6");
 		System.out.print(Stats.geoMean(0.25,0.04));
 		System.out.println("...should be 0.1");
 
 		System.out.println("\nTesting negative numbers:");
-    System.out.print(Stats.mean(-10,-20));
-    System.out.println("...should be -15");
-    System.out.print(Stats.mean(-17.4,-6.0));
-    System.out.println("...should be -11.7");
-    System.out.print(Stats.max(-50,-1));
-    System.out.println("....should be -1");
-    System.out.print(Stats.max(-5.3,1.1));
-    System.out.println("...should be 1.1");
-    System.out.print(Stats.geoMean(-40,9));
-    System.out.println("...should throw error"); // reality: 0
-    System.out.print(Stats.geoMean(-0.25,-0.04));
-    System.out.println("...should be 0.1");
+    		System.out.print(Stats.mean(-10,-20));
+    		System.out.println("...should be -15");
+    		System.out.print(Stats.mean(-17.4,-6.0));
+    		System.out.println("...should be -11.7");
+    		System.out.print(Stats.max(-50,-1));
+    		System.out.println("....should be -1");
+    		System.out.print(Stats.max(-5.3,1.1));
+    		System.out.println("...should be 1.1");
+    		System.out.print(Stats.geoMean(-40,9));
+    		System.out.println("...should throw error"); // reality: 0
+    		System.out.print(Stats.geoMean(-0.25,-0.04));
+    		System.out.println("...should be 0.1");
 
 		System.out.println("\nTesting overloaded methods:");
 		System.out.print(Stats.max(-10, 0, 1));
