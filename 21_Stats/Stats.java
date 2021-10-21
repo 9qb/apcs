@@ -12,7 +12,7 @@ QCC:
 - With the method geoMean() that returns an int, we saw that it returns 0 when we would expect an error or NaN (such as when taking the square root of a negative value). We believe that this is a result of an int not being able to store NaN as a data value, resulting in it returning 0, instead.
 */
 
-// skeleton taken from closet
+// skeleton taken from the closet
 
 public class Stats {
 
