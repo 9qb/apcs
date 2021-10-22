@@ -7,8 +7,13 @@
 public class Coin {
 
   //attributes aka instance vars
-
-
+  private String denomination;
+  private double value;
+  private String upFace;
+  private int flipCtr;
+  private int headsCtr;
+  private int tailsCtr;
+  private double bias;
 
   /***
    *  Coin() -- default constuctor
@@ -32,7 +37,7 @@ public class Coin {
       postcond:
   ***/
   public Coin( String s ) {
-
+      denomination = s;
   }
 
 
@@ -42,30 +47,31 @@ public class Coin {
       postcond:
   ***/
   public Coin( String s, String nowFace ) {
-
+    denomination = s;
+    upFace = nowFace;
   }
 
 
   // Accessors...
   // ----------------------------
   public String getUpFace() {
-
+    return upFace;
   }
 
   public int getFlipCtr() {
-
+    return flipCtr;
   }
 
   public double getValue() {
-
+    return value;
   }
 
   public int getHeadsCtr() {
-
+    return headsCtr;
   }
 
   public int getTailsCtr() {
-
+    return tailsCtr;
   }
   // ----------------------------
 
@@ -77,7 +83,25 @@ public class Coin {
    * Returns value assigned.
    ***/
   private double assignValue( String s ) {
-
+    if (s == "penny"){
+      value = 0.01;
+    }
+    else if (s == "nickel"){
+      value = 0.05;
+    }
+    else if (s == "dime"){
+      value = 0.10;
+    }
+    else if (s == "quarter"){
+      value = 0.25;
+    }
+    else if (s == "half dollar"){
+      value = 0.50;
+    }
+    else if (s == "dollar"){
+      value = 1.00;
+    }
+    return value;
   }
 
 
@@ -87,6 +111,7 @@ public class Coin {
       postcond: Coin's attribs reset to starting vals
   ***/
   public void reset( String s, double d ) {
+    upFace = s;
 
   }
 
@@ -100,9 +125,20 @@ public class Coin {
    * Either headsCtr or tailsCtr incremented by 1, as approp.
    * Returns "heads" or "tails"
    ***/
+   /*
   public String flip() {
-
+    if (Math.random(0.0, bias) == 0){
+      upFace = "tails";
+      tailsCtr++;
+    }
+    else {
+      upFace = "heads";
+      headsCtr++;
+    }
+    flipCtr++;
+    return upFace;
   }
+  */
 
 
   /***
@@ -111,18 +147,20 @@ public class Coin {
    * postcond: Returns true if both coins showing heads
    * or both showing tails. False otherwise.
    ***/
+   /*
   public boolean equals( Coin other ) {
 
   }
-
+*/
 
   /***
    * String toString() -- overrides toString() provided by Java
    * precond: n/a
    * postcond: Return String comprised of name and current face
    ***/
+   /*
   public String toString() {
 
   }
-
+*/
 }//end class
