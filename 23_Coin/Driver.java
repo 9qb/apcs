@@ -17,7 +17,6 @@ public class Driver {
 
     //build Objects from blueprint specified by class Coin
 
-
     //test default constructor
       Coin mine = new Coin();
 
@@ -32,22 +31,20 @@ public class Driver {
       System.out.println("yours: " + yours);
       System.out.println("wayne: " + wayne);
 
-      /*test flip() method
+      //test flip() method
       System.out.println("\nAfter flipping...");
       yours.flip();
       wayne.flip();
       System.out.println("yours: " + yours);
-      System.out.println("wayne: " + wayne);*/
+      System.out.println("wayne: " + wayne);
 
-      /*test equals() method
+      //test equals() method
       if ( yours.equals(wayne) ) {
         System.out.println( "Matchee matchee!" );
       }
       else {
         System.out.println( "No match. Firestarter you can not be." );
-      }*/
-
-
+      }
 
   }//end main()
 
