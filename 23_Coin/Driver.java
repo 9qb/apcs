@@ -1,3 +1,20 @@
+// Brian Li + Robert, Jun Hong Wang + Bob
+// APCS
+// HW23 -- Coin and Driver
+// 2021-10-22
+// time spent: 1.0 hours
+
+/*
+DISCO
+0. Math.random() is capable of producing a random double within the range of [0,1). 
+1. Using this means that the object is referring to itself. It is used to clarify what object a method or variable belongs to.
+2. By supplying an instance of a class as an argument in a method, you are able to access its instance variables, private or not.  
+
+QCC
+0. If you overwrite a method, such as toString(), is there a way to still use the original method associated with the method name that is overwritten?
+1. What is the difference between null and an empty String? 
+*/
+
 /***
     driver for class Coin
 
