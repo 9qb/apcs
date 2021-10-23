@@ -44,6 +44,7 @@ public class Coin {
   ***/
   public Coin( String s ) {
     name = s;
+    assignValue(s);
 
     // because no upFace is provided, one is generated
     if (bias <= Math.random()){
@@ -63,6 +64,7 @@ public class Coin {
   public Coin( String s, String nowFace ) {
     name = s;
     upFace = nowFace;
+    assignValue(s);
   }
 
 
@@ -127,6 +129,11 @@ public class Coin {
   public void reset( String s, double d ) {
     upFace = s;
     bias = d;
+    value = 0;
+    name = "";
+    flipCtr = 0;
+    headsCtr = 0;
+    tailsCtr = 0;
   }
 
 
@@ -161,12 +168,7 @@ public class Coin {
    * or both showing tails. False otherwise.
    ***/
   public boolean equals( Coin other ) {
-    if (this.upFace == other.upFace){
-      return true;
-    }
-    else {
-      return false;
-    }
+    return this.upFace == other.upFace;
   }
 
   /***
