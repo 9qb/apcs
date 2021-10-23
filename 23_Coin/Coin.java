@@ -35,7 +35,7 @@ public class Coin {
    ***/
   public Coin() {
     // because no upFace is provided, one is generated
-    if (bias <= Math.random()){
+    if (0.5 <= Math.random()){ 
       upFace = "tails";
     }
     else {
@@ -60,7 +60,7 @@ public class Coin {
     assignValue(s);
 
     // because no upFace is provided, one is generated
-    if (bias <= Math.random()){
+    if (0.5 <= Math.random()){
       upFace = "tails";
     }
     else {
