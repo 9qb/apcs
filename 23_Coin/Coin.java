@@ -139,11 +139,9 @@ public class Coin {
       precond:  s is "heads" or "tails", 0.0 <= d <= 1.0
       postcond: Coin's attribs reset to starting vals
   ***/
-  public void reset( String s, double d ) {
+  public void reset( String s, double d ) { // initial coin name and value are kept the same
     upFace = s;
     bias = d;
-    value = 0;
-    name = "";
     flipCtr = 0;
     headsCtr = 0;
     tailsCtr = 0;
