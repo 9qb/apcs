@@ -7,13 +7,13 @@
 public class Coin {
 
   //attributes aka instance vars
-  private String denomination;
   private double value;
   private String upFace;
+  private String name;
   private int flipCtr;
   private int headsCtr;
   private int tailsCtr;
-  private double bias;
+  private double bias = 0.5; // set to no bias by default
 
   /***
    *  Coin() -- default constuctor
@@ -21,7 +21,13 @@ public class Coin {
    *  postcond:
    ***/
   public Coin() {
-
+    // because no upFace is provided, one is generated
+    if (bias <= Math.random()){
+      upFace = "tails";
+    }
+    else {
+      upFace = "heads";
+    }
   }
 
 
@@ -37,7 +43,15 @@ public class Coin {
       postcond:
   ***/
   public Coin( String s ) {
-      denomination = s;
+    name = s;
+
+    // because no upFace is provided, one is generated
+    if (bias <= Math.random()){
+      upFace = "tails";
+    }
+    else {
+      upFace = "heads";
+    }
   }
 
 
@@ -47,7 +61,7 @@ public class Coin {
       postcond:
   ***/
   public Coin( String s, String nowFace ) {
-    denomination = s;
+    name = s;
     upFace = nowFace;
   }
 
@@ -112,7 +126,7 @@ public class Coin {
   ***/
   public void reset( String s, double d ) {
     upFace = s;
-
+    bias = d;
   }
 
 
@@ -125,9 +139,9 @@ public class Coin {
    * Either headsCtr or tailsCtr incremented by 1, as approp.
    * Returns "heads" or "tails"
    ***/
-   /*
+
   public String flip() {
-    if (Math.random(0.0, bias) == 0){
+    if (bias <= Math.random()){
       upFace = "tails";
       tailsCtr++;
     }
@@ -138,7 +152,6 @@ public class Coin {
     flipCtr++;
     return upFace;
   }
-  */
 
 
   /***
@@ -147,20 +160,23 @@ public class Coin {
    * postcond: Returns true if both coins showing heads
    * or both showing tails. False otherwise.
    ***/
-   /*
   public boolean equals( Coin other ) {
-
+    if (this.upFace == other.upFace){
+      return true;
+    }
+    else {
+      return false;
+    }
   }
-*/
 
   /***
    * String toString() -- overrides toString() provided by Java
    * precond: n/a
    * postcond: Return String comprised of name and current face
    ***/
-   /*
-  public String toString() {
 
+  public String toString() {
+    return name + " -- " + upFace;
   }
-*/
+
 }//end class
