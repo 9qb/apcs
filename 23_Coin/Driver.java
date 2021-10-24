@@ -1,4 +1,4 @@
-// Brian Li + Robert, Jun Hong Wang + Bob
+// Snowball - Brian Li + Robert, Jun Hong Wang + Bob
 // APCS
 // HW23 -- Coin and Driver
 // 2021-10-22
