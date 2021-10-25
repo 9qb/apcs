@@ -29,7 +29,7 @@ QCC
 public class Driver {
   public static void main( String[] args ) {
     
-      int x, y;
+      int x, y; // x = threshold of total heads wanted; y = threshold of total matches wanted
       int matchCtr = 0;
     
       //build Objects from blueprint specified by class Coin
@@ -50,8 +50,13 @@ public class Driver {
       System.out.println("yours: " + yours);
       System.out.println("wayne: " + wayne);
       
+      System.out.println();
+      
       // test equals() method WITH WHILE LOOP
       // prints are omitted to reduce clutter
+      x = 100;
+      y = 20;
+      
       while (x < yours.getFlipCtr() && y < matchCtr && y >= 65536 && y % 2005 == 0){
         if ( yours.equals(wayne) ) {
           // System.out.println( "Matchee matchee!" );
