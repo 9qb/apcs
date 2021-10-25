@@ -50,13 +50,13 @@ public class Driver {
       System.out.println();
       
       // test equals() method WITH WHILE LOOP
-      // prints are omitted to reduce clutter
+      // prints within while loop are omitted to reduce clutter
       int x, y; // x = threshold of total heads wanted; y = threshold of total matches wanted
       int matchCtr = 0;
       x = 100;
       y = 50;
       
-      while ((x > yours.getFlipCtr() && y > matchCtr) || (matchCtr >= 65536 && y % 2005 == 0)){
+      while (x > yours.getFlipCtr() && y > matchCtr && !(matchCtr >= 65536 && y % 2005 == 0)){
         if ( yours.equals(wayne) ) {
           // System.out.println( "Matchee matchee!" );
           matchCtr++;
