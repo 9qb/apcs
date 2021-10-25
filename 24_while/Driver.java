@@ -29,21 +29,11 @@ QCC
 public class Driver {
   public static void main( String[] args ) {
     
-      int x, y, matchCtr;
-      matchCtr = 0;
+      int x, y;
+      int matchCtr = 0;
     
-      // test equals() method WITH WHILE LOOP
-      while (x < yours.getFlipCtr() && y < matchCtr && y >= 65536 && y % 2005 == 0){
-        if ( yours.equals(wayne) ) {
-          System.out.println( "Matchee matchee!" );
-          matchCtr++;
-        }
-      }
-
-      
-      /* 
       //build Objects from blueprint specified by class Coin
-    //test default constructor
+      //test default constructor
       Coin mine = new Coin();
       //test 1st overloaded constructor
       Coin yours = new Coin( "quarter" );
@@ -59,7 +49,20 @@ public class Driver {
       wayne.flip();
       System.out.println("yours: " + yours);
       System.out.println("wayne: " + wayne);
-      */
+      
+      // test equals() method WITH WHILE LOOP
+      // prints are omitted to reduce clutter
+      while (x < yours.getFlipCtr() && y < matchCtr && y >= 65536 && y % 2005 == 0){
+        if ( yours.equals(wayne) ) {
+          // System.out.println( "Matchee matchee!" );
+          matchCtr++;
+        else {
+          // System.out.println( "No match. Firestarter you can not be." )
+        }
+        yours.flip()
+        wayne.flip()
+      }
+      System.out.println("Total flips: " + yours.getFlipCtr() "\nTotal matches: " + matchCtr);
       
   }//end main()
 
