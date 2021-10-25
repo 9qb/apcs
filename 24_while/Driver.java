@@ -53,10 +53,10 @@ public class Driver {
       // prints within while loop are omitted to reduce clutter
       int x, y; // x = threshold of total heads wanted; y = threshold of total matches wanted
       int matchCtr = 0;
-      x = 100;
-      y = 50;
+      x = 10000;
+      y = 20000;
       
-      while (x > yours.getFlipCtr() || y > matchCtr || !(matchCtr >= 65536 && matchCtr % 2005 == 0)){
+      while (x > yours.getHeadsCtr() || y > matchCtr || !(matchCtr >= 65536 && matchCtr % 2005 == 0)){
         if ( yours.equals(wayne) ) {
           // System.out.println( "Matchee matchee!" );
           matchCtr++;
@@ -67,7 +67,7 @@ public class Driver {
         yours.flip();
         wayne.flip();
       }
-      System.out.println("Total flips: " + yours.getFlipCtr() + "\nTotal matches: " + matchCtr);
+      System.out.println("Total set of flips: " + yours.getFlipCtr() + "\nTotal matches: " + matchCtr + "\nTotal heads: " + yours.getHeadsCtr() + "\nTotal tails: " + yours.getTailsCtr());
       
   }//end main()
 
