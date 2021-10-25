@@ -10,6 +10,9 @@ DISCO
 1. Using a while loop requires a terminating condition, otherwise your loop will go on forever. 
 QCC
 0. When flipping until "x heads have come up", is that referring to heads coming up from both yours and wayne? Or only from yours/wayne?
+POST-v0 MODS
+0. changed constructors to refer to itself via this()
+1. made use of assignValue() in constructor
 */
 
 public class Driver {
