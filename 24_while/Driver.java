@@ -61,11 +61,12 @@ public class Driver {
         if ( yours.equals(wayne) ) {
           // System.out.println( "Matchee matchee!" );
           matchCtr++;
-        else {
-          // System.out.println( "No match. Firestarter you can not be." )
         }
-        yours.flip()
-        wayne.flip()
+        else {
+        //   System.out.println( "No match. Firestarter you can not be." )
+        }
+        yours.flip();
+        wayne.flip();
       }
       System.out.println("Total flips: " + yours.getFlipCtr() + "\nTotal matches: " + matchCtr);
       
