@@ -57,7 +57,7 @@ public class Driver {
       x = 100;
       y = 20;
       
-      while (x < yours.getFlipCtr() && y < matchCtr && (matchCtr >= 65536 && y % 2005 == 0)){
+      while (x > yours.getFlipCtr() || y > matchCtr || (matchCtr >= 65536 && y % 2005 == 0)){
         if ( yours.equals(wayne) ) {
           // System.out.println( "Matchee matchee!" );
           matchCtr++;
