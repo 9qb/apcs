@@ -1,7 +1,7 @@
 // Snowball - Brian Li + Robert, Jun Hong Wang + Bob
 // APCS
 // HW23 -- Coin and Driver
-// 2021-10-22
+// 2021-10-25
 // time spent: 1.0 hours
 
 /*
@@ -67,7 +67,10 @@ public class Driver {
         yours.flip();
         wayne.flip();
       }
-      System.out.println("Total sets of flips: " + yours.getFlipCtr() + "\nTotal matches: " + matchCtr + "\nTotal heads: " + (yours.getHeadsCtr() + wayne.getHeadsCtr()) + "\nTotal tails: " + (yours.getTailsCtr() + wayne.getTailsCtr()));
+      System.out.println("Total sets of flips: " + yours.getFlipCtr() + "\nTotal matches: " + matchCtr);
+      System.out.println("\nTotal heads: " + (yours.getHeadsCtr() + wayne.getHeadsCtr()) + "\nTotal tails: " + (yours.getTailsCtr() + wayne.getTailsCtr()));
+      System.out.println("\nTotal heads from yours: " + yours.getHeadsCtr() + "\nTotal tails from yours: " + yours.getTailsCtr());
+      System.out.println("\nTotal heads from wayne: " + wayne.getHeadsCtr() + "\nTotal tails from wayne: " + wayne.getTailsCtr());
       
   }//end main()
 
