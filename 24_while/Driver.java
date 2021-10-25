@@ -67,7 +67,7 @@ public class Driver {
         yours.flip();
         wayne.flip();
       }
-      System.out.println("Total sets of flips: " + yours.getFlipCtr() + "\nTotal matches: " + matchCtr + "\nTotal heads: " + (yours.getHeadsCtr() + wayne.getHeadsCtr) + "\nTotal tails: " + (yours.getTailsCtr() + wayne.getTailsCtr));
+      System.out.println("Total sets of flips: " + yours.getFlipCtr() + "\nTotal matches: " + matchCtr + "\nTotal heads: " + (yours.getHeadsCtr() + wayne.getHeadsCtr()) + "\nTotal tails: " + (yours.getTailsCtr() + wayne.getTailsCtr()));
       
   }//end main()
 
