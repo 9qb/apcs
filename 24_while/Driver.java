@@ -56,7 +56,7 @@ public class Driver {
       x = 10000;
       y = 20000;
       
-      while (x > yours.getHeadsCtr() || y > matchCtr || !(matchCtr >= 65536 && matchCtr % 2005 == 0)){
+      while (x > yours.getHeadsCtr() + wayne.getHeadsCtr() || y > matchCtr || !(matchCtr >= 65536 && matchCtr % 2005 == 0)){
         if ( yours.equals(wayne) ) {
           // System.out.println( "Matchee matchee!" );
           matchCtr++;
@@ -67,7 +67,7 @@ public class Driver {
         yours.flip();
         wayne.flip();
       }
-      System.out.println("Total set of flips: " + yours.getFlipCtr() + "\nTotal matches: " + matchCtr + "\nTotal heads: " + yours.getHeadsCtr() + "\nTotal tails: " + yours.getTailsCtr());
+      System.out.println("Total sets of flips: " + yours.getFlipCtr() + "\nTotal matches: " + matchCtr + "\nTotal heads: " + (yours.getHeadsCtr() + wayne.getHeadsCtr) + "\nTotal tails: " + (yours.getTailsCtr() + wayne.getTailsCtr));
       
   }//end main()
 
