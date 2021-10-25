@@ -54,9 +54,9 @@ public class Driver {
       int x, y; // x = threshold of total heads wanted; y = threshold of total matches wanted
       int matchCtr = 0;
       x = 100;
-      y = 66165;
+      y = 200;
       
-      while (x > yours.getFlipCtr() || y > matchCtr || (matchCtr >= 65536 && y % 2005 == 0)){
+      while (!(x > yours.getFlipCtr() || y > matchCtr || (matchCtr >= 65536 && y % 2005 == 0))){
         if ( yours.equals(wayne) ) {
           // System.out.println( "Matchee matchee!" );
           matchCtr++;
