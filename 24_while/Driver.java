@@ -29,9 +29,6 @@ QCC
 public class Driver {
   public static void main( String[] args ) {
     
-      int x, y; // x = threshold of total heads wanted; y = threshold of total matches wanted
-      int matchCtr = 0;
-    
       //build Objects from blueprint specified by class Coin
       //test default constructor
       Coin mine = new Coin();
@@ -54,6 +51,8 @@ public class Driver {
       
       // test equals() method WITH WHILE LOOP
       // prints are omitted to reduce clutter
+      int x, y; // x = threshold of total heads wanted; y = threshold of total matches wanted
+      int matchCtr = 0;
       x = 100;
       y = 20;
       
