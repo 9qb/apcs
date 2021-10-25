@@ -1,30 +1,16 @@
 // Snowball - Brian Li + Robert, Jun Hong Wang + Bob
 // APCS
-// HW23 -- Coin and Driver
+// HW24 -- while loops
 // 2021-10-25
 // time spent: 1.0 hours
 
 /*
 DISCO
-0. Math.random() is capable of producing a random double within the range of [0,1). 
-1. Using this means that the object is referring to itself. It is used to clarify what object a method or variable belongs to.
-2. By supplying an instance of a class as an argument in a method, you are able to access its instance variables, private or not.  
+0. In order to access the value of a private instance variable belonging to another class, you must use a public method provided that returns the variable. You cannot access it directly.
+1. Using a while loop requires a terminating condition, otherwise your loop will go on forever. 
 QCC
-0. If you overwrite a method, such as toString(), is there a way to still use the original method associated with the method name that is overwritten?
-1. What is the difference between null and an empty String? 
+0. When flipping until "x heads have come up", is that referring to heads coming up from both yours and wayne? Or only from yours/wayne?
 */
-
-/***
-    driver for class Coin
-    ~~~ SUGGESTED WORKFLOW: ~~~
-    1. Compile this file and run. Note anything notable.
-    2. Move the "TOP" line down, so that it is below the first statement.
-    (emacs: with cursor at beginning of TOP line, C-k C-k, DOWN, DOWN, C-y)
-    (your editor: ???)
-    3. Compile and run again.
-    4. Resolve errors one at a time until it works.
-    5. Repeat 2-4 until TOP meets BOTTOM.
-***/
 
 public class Driver {
   public static void main( String[] args ) {
