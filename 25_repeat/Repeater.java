@@ -1,7 +1,7 @@
 // Geese: Brian Li + Robert, Anthony Sun + Corn, Weichen Liu + Blueface
 // APCS
 // HW25 -- while and recursion
-// 2021-10=26
+// 2021-10-26
 // time spent: 0.4 hours
 
 /*
