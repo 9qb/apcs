@@ -1,18 +1,18 @@
 // Snowball - Brian Li + Robert, Jun Hong Wang + Bob
 // APCS
-// HW23 -- Coin and Driver
-// 2021-10-22
+// HW24 -- while loops
+// 2021-10-25
 // time spent: 1.0 hours
 
 /*
 DISCO
-0. Math.random() is capable of producing a random double within the range of [0,1). 
-1. Using this means that the object is referring to itself. It is used to clarify what object a method or variable belongs to.
-2. By supplying an instance of a class as an argument in a method, you are able to access its instance variables, private or not.  
-
+0. In order to access the value of a private instance variable belonging to another class, you must use a public method provided that returns the variable. You cannot access it directly.
+1. Using a while loop requires a terminating condition, otherwise your loop will go on forever. 
 QCC
-0. If you overwrite a method, such as toString(), is there a way to still use the original method associated with the method name that is overwritten?
-1. What is the difference between null and an empty String? 
+0. When flipping until "x heads have come up", is that referring to heads coming up from both yours and wayne? Or only from yours/wayne?
+POST-v0 MODS
+0. changed constructors to refer to itself via this()
+1. made use of assignValue() in constructor
 */
 
 // skeleton taken from closet
@@ -34,13 +34,7 @@ public class Coin {
    *  postcond:
    ***/
   public Coin() {
-    // because no upFace is provided, one is generated
-    if (0.5 <= Math.random()){ 
-      upFace = "tails";
-    }
-    else {
-      upFace = "heads";
-    }
+    reset("heads", 0.5);
   }
 
 
@@ -56,16 +50,9 @@ public class Coin {
       postcond:
   ***/
   public Coin( String s ) {
+    this();
     name = s;
     assignValue(s);
-
-    // because no upFace is provided, one is generated
-    if (0.5 <= Math.random()){
-      upFace = "tails";
-    }
-    else {
-      upFace = "heads";
-    }
   }
 
 
@@ -75,9 +62,8 @@ public class Coin {
       postcond:
   ***/
   public Coin( String s, String nowFace ) {
-    name = s;
+    this(s);
     upFace = nowFace;
-    assignValue(s);
   }
 
 
@@ -159,7 +145,7 @@ public class Coin {
    ***/
 
   public String flip() {
-    if (bias <= Math.random()){
+    if (bias < Math.random()){
       upFace = "tails";
       tailsCtr++;
     }
