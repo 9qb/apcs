@@ -27,4 +27,5 @@ public class Main {
       smaller = smaller.toLowerCase();
       int i = larger.length() - smaller.length();
       return ((larger.substring(i, larger.length())).equals(smaller));
+    }
 }
