@@ -14,14 +14,17 @@ public class Main {
      * str.toLowerCase() returns the lowercase version of a string.
      */
     public static boolean endOther(String a, String b) {
-      int codeCounter = 0;
-      for (int i = 0; i < str.length(); i++){
-        if (i + 4 <= str.length()){
-          if ((str.substring(i, i+2)).equals("co") && (str.substring(i+3, i+4)).equals("e")){
-            codeCounter++;
-          }
-        }
+      String larger, smaller;
+      if (a.length() > b.length()){
+        larger = a;
+        smaller = b;
       }
-      return codeCounter;
-    }
+      else{
+        larger = b;
+        smaller = a;
+      }
+      larger = larger.toLowerCase();
+      smaller = smaller.toLowerCase();
+      int i = larger.length() - smaller.length();
+      return ((larger.substring(i, larger.length())).equals(smaller));
 }
