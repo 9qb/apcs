@@ -28,9 +28,6 @@ public class Commafier {
 
     public static String commafyF(int input){
       String stringInput = Integer.toString(input);
-      if (stringInput.length() <= 3){ // checks if a comma is necessary
-        return stringInput;
-      }
       for (int counter = 3; counter < stringInput.length(); counter += 4){ // changes by 4 to account for extra comma character
         stringInput = stringInput.substring(0, stringInput.length() - counter) + "," + stringInput.substring(stringInput.length() - counter, stringInput.length());
       }
