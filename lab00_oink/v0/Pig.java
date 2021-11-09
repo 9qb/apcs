@@ -1,16 +1,9 @@
 /***
- * Aliens - Weichen Liu + Blueface, Brian Li + Robert, Lior Polischouk + Toothless)
+ * Clyde "Thluffy" Sinclair
  * APCS
- * Lab v0 -- Pig Latin Work
- * 2021-11-08
- * time spent: 0.9 hrs
- *
- * DISCO
- * - Scanner.next() checks for the next word in the input.
- * - Scanner.nextLine() returns the entire input.
- *
- * QCC
- * - What is the most efficient loop that goes through every word in the input that we give Scanner?
+ * HW31 -- deploying linear search on Strings, using helper methods
+ * 2021-11-04r
+ * time spent: .5hrs
  *
  * class Pig
  * a Pig Latin translator
@@ -29,8 +22,6 @@
  *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
  ***/
 
-
-import java.util.Scanner;
 
 public class Pig {
 
@@ -102,7 +93,7 @@ public class Pig {
     hasAVowel("zzz") -> false
     **/
   public static boolean hasAVowel( String w ) {
-    return countVowels(w) != 0;
+    return w.indexOf(w) >= 0;
   }
 
 
@@ -149,7 +140,30 @@ public class Pig {
     beginsWithVowel("strong") --> false
     **/
   public static boolean beginsWithVowel( String w ) {
-    return VOWELS.indexOf( w.substring(0,1) ) != -1;
+    return isAVowel( w.substring(0,1) );
+  }
+
+
+  /**
+    String engToPig(String) -- converts an English word to Pig Latin
+    pre:  w.length() > 0
+    post: engToPig("apple")  --> "appleway"
+    engToPig("strong") --> "ongstray"
+    engToPig("java")   --> "avajay"
+    **/
+  public static String engToPig( String w ) {
+
+    String ans = "";
+
+    if ( beginsWithVowel(w) )
+      ans = w + "way";
+
+    else {
+      int vPos = w.indexOf( firstVowel(w) );
+      ans = w.substring(vPos) + w.substring(0,vPos) + "ay";
+    }
+
+    return ans;
   }
 
   // public static String toCapitalize(String w){
@@ -166,7 +180,7 @@ public class Pig {
             isPunc("b") -> false
       =====================================*/
     public static boolean isPunc( String symbol ) {
-			return PUNCS.indexOf( symbol ) != -1;
+	return PUNCS.indexOf( symbol ) != -1;
     }
 
 
@@ -184,8 +198,8 @@ public class Pig {
     /*=====================================
       boolean hasPunc(String) -- tells whether a String contains punctuation
       pre:  w != null
-      post: hasPunc("cat.") -> true
-            hasPunc("cat") -> false
+      post: hasPunc(“cat.”) -> true
+            hasPunc(“cat”) -> false
       =====================================*/
     public static boolean hasPunc( String w ) {
       for (int counter = 0; counter < w.length(); counter++){
@@ -195,7 +209,7 @@ public class Pig {
       }
       return false;
     }
-
+  
 
 
     /*=====================================
@@ -208,83 +222,24 @@ public class Pig {
 	     return isUpperCase(w.substring(0,1) );
     }
 
-    /**
-      String engToPig(String) -- converts an English word to Pig Latin
-      pre:  w.length() > 0
-      post: engToPig("apple")  --> "appleway"
-      engToPig("strong") --> "ongstray"
-      engToPig("java")   --> "avajay"
-      **/
-    public static String engToPig( String w ) {
 
-      String ans = "";
+  public static void main( String[] args ) {
 
-      if ( beginsWithVowel(w) && (!(w.substring(0,1).equals("y"))) )
-        ans = w + "way";
-
-      else {
-        int vPos = w.indexOf( firstVowel(w.substring(1)) ); // finds first vowel, skips over y if y is the first character
-        ans = w.substring(vPos) + w.substring(0,vPos) + "ay";
-      }
-
-      return ans;
+    for( String word : args ) {
+      System.out.println( "allVowels \t" + allVowels(word) );
+      System.out.println( "firstVowels \t" + firstVowel(word) );
+      System.out.println( "countVowels \t" + countVowels(word) );
+            System.out.println( "engToPig \t" + engToPig(word) );
+      System.out.println( "---------------------" );
     }
 
-    public static String newEngToPig( String w) {
-    String end = "";
-    String ans = "";
+    // testing hasPunc
+    // System.out.println(hasPunc("cat."));
+    // System.out.println(hasPunc("cat"));
 
-    if (PUNCS.indexOf(w.substring( w.length() - 1, w.length() ) ) > -1){ // checks for presence of punctuation
-      end = w.substring(w.length() - 1, w.length());
-      w = w.substring(0, w.length() - 1);
-    }
-
-    if (beginsWithUpper(w)) {
-      String lowerW = w.toLowerCase();
-      ans = engToPig(lowerW).substring(0,1).toUpperCase() + engToPig(lowerW).substring(1);
-    } else {
-      ans = engToPig(w);
-    }
-
-    return ans + end;
-    }
-
-    public static String pigifyScan(String input){
-      String reduction = input;
-      if (!(hasA(reduction, " "))){ // base case, checks if it is only one word
-        return newEngToPig(reduction);
-      }
-      else{ // recursive reduction
-        return newEngToPig(reduction.substring(0, reduction.indexOf(" "))) + " " + pigifyScan(reduction.substring(reduction.indexOf(" ") + 1));
-      }
-    }
-
-    public static void main( String[] args ) {
-      String input = "";
-      Scanner scan = new Scanner(System.in);
-      System.out.println("Please give an input in English that you want to translate to Pig Latin.");
-      input = scan.nextLine();
-      System.out.println(pigifyScan(input));
-
-      // input = scan.next();
-      // System.out.println("Output: " + newEngToPig(input));
-      // input = scan.next();
-      //
-      // while ( !(scan.next()).equals("") ){
-      //   System.out.print(" " + newEngToPig(input));
-      //   input = scan.next();
-      // }
-      //
-      // System.out.println();
-
-      //
-      // for( String word : args ) {
-      //   System.out.println( "allVowels \t" + allVowels(word) );
-      //   System.out.println( "firstVowels \t" + firstVowel(word) );
-      //   System.out.println( "countVowels \t" + countVowels(word) );
-      //   System.out.println( "engToPig \t" + engToPig(word) );
-      //   System.out.println( "---------------------" );
-      // }
+    // testing beginsWithUpper
+    System.out.println(beginsWithUpper("Apple"));
+    System.out.println(beginsWithUpper("apple"));
 
   }//end main()
 
