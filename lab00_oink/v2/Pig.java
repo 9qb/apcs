@@ -2,7 +2,7 @@
  * Aliens - Weichen Liu + Blueface, Brian Li + Robert, Lior Polischouk + Toothless)
  * APCS
  * Lab v0 -- Pig Latin Work
- * 2021-11-08
+ * 2021-11-09
  * time spent: 0.9 hrs
  *
  * DISCO
@@ -11,10 +11,16 @@
  *
  * QCC
  * - What is the most efficient loop that goes through every word in the input that we give Scanner?
+ *
+ * HOW WE UTILIZED SCANNER DEMO (v2)
+ * - We used the while loop with the .hasNext(), but instead of using .next(), we used .nextLine() to check the entirety of the input on the line. We did this to consider inputs that have more than one word.
+ *
+ * WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO
+ * - The scanner runs .next() twice on an input that only has one word on one line.
  * 
-HOW WE UTILIZED SCANNER DEMO (v<version num in which you incorporated Scanner functionality>)
-WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO
-NEW IN v<this version>
+ * NEW IN v2
+ * - actual implementation of ScannerDemo
+ *
  * class Pig
  * a Pig Latin translator
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
