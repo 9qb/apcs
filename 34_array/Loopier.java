@@ -72,16 +72,15 @@ public class Loopier{
   }
 
   public static int freqRecHelper(int[] a, int target, int counter, int accumulator){
-    if (counter == a.length){ // checks if counter has gone out of bounds
+    if (counter == a.length){
       return accumulator;
     }
-    else if (a[counter] == target){ // checks if index is equal to target
-      accumulator++;
+    else if (a[counter] == target){ // if index is equal to target, add 1 occurence and then continue to the next index
+      return freqRecHelper(a, target, counter + 1, accumulator + 1); // recursive call
     }
-    else{
-      return freqRecHelper(a, target, counter + 1, accumulator); // recursive call
+    else { // if index is not equal to target, no occurence is added to total accumulator, move onto next index
+      return freqRecHelper(a, target, counter + 1, accumulator);
     }
-    return accumulator;
   }
 
   public static void main(String[] args){
