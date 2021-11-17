@@ -1,8 +1,14 @@
 /*****************************************************
- * Clyde "Thluffy" Sinclair
- * APCS pd00
+ * Peanut Butter and Nutella - Prattay Dey + Winnie, Brian Li + Robert, Nafiz Labib + Martha
+ * APCS pd06
  * HW38 -- Shmoney
- * 2021-11-18
+ * 2021-11-17
+ *
+ * DISCO
+ * - To create tabs in your Strings, you can use \t, like how you can use \n to make a newline.
+ *
+ * QCC
+ * - How could we go about generalizing miniWin? What if we wanted to expand the number of "columns" that needed a match?
  *
  * class Slots
  * skeleton
@@ -16,8 +22,8 @@ public class Slots {
     "lemon", "lemon", "lemon",
     "cherry", "cherry", "cherry",
     "orange", "orange", "orange",
-    "grapefruit", "grapefruit", "grapefruit",
-    "tangerine", "tangerine", "tangerine",
+    "kiwi", "kiwi", "kiwi",
+    "apple", "apple", "apple",
     "ugli", "ugli", "ugli",
     "peach", "peach", "peach"
   };
@@ -33,7 +39,7 @@ public class Slots {
   public Slots()
   {
     //allocate memory for _fruits based on size of FRUITS:
-    _fruits = new String[24];
+    _fruits = new String[FRUITS.length];
 
     //copy elements of FRUITS into _fruits:
     for (int counter = 0; counter < _fruits.length; counter++){
@@ -77,7 +83,7 @@ public class Slots {
     // iterate through the array, swapping
     // the val at each index with a randomly chosen other index
     for(int counter = 0; counter < _fruits.length; counter++){
-      swap(counter, (int)(Math.random() * 24));
+      swap(counter, (int)(Math.random() * _fruits.length));
     }
   }
 
@@ -91,9 +97,7 @@ public class Slots {
   public boolean jackpot()
   {
     boolean retBoo = false;
-    if (_fruits[0].equals(_fruits[1] && _fruits[0].equals(_fruits[2]))){
-      retBoo = true;
-    }
+    retBoo = (_fruits[0].equals(_fruits[1]) && _fruits[0].equals(_fruits[2]));
     return retBoo;
   }
 
@@ -105,13 +109,12 @@ public class Slots {
     or if first 3 slots mutually distinct,
     false otherwise
     =====================================*/
-  // public boolean miniWin()
-  // {
-  //   boolean retBoo = ?
-  //
-  //
-  //   return retBoo;
-  // }
+  public boolean miniWin()
+  {
+    boolean retBoo = (jackpot() || ((!(_fruits[0].equals(_fruits[1])) &&
+    (!(_fruits[0].equals(_fruits[2]))) && (!(_fruits[1].equals(_fruits[2]))))) );
+    return retBoo;
+  }
 
 
   //main() method for testing
@@ -121,7 +124,7 @@ public class Slots {
     Slots machine01 = new Slots();
     Slots machine02 = new Slots();
 
-    //test to verify slot machines function indepently
+    //test to verify slot machines function independently
     System.out.println();
     System.out.println( "Machine01 initial state:\t" + machine01 );
     System.out.println( "Machine02 initial state:\t" + machine02 );
@@ -129,14 +132,13 @@ public class Slots {
     System.out.println( "\nSpinning machine01...\n" );
 
     machine01.spinOnce();
-    machine02.spinOnce(); // added machine02 spin
+    // machine02.spinOnce(); // added machine02 spin
 
     System.out.println();
     System.out.println( "Machine01 state:\t" + machine01 );
     System.out.println( "Machine02 state:\t" + machine02 );
     System.out.println();
 
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     //test gamble-until-you-win mechanism
 
@@ -169,6 +171,7 @@ public class Slots {
     System.out.println( "====================================" );
     System.out.println( "Your spin..." + "\t" + machine01 );
     System.out.println( "JACKPOT!\n" );
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main
 
