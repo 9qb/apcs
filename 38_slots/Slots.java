@@ -3,6 +3,7 @@
  * APCS pd06
  * HW38 -- Shmoney
  * 2021-11-17
+ * time spent: 0.6 hours
  *
  * DISCO
  * - To create tabs in your Strings, you can use \t, like how you can use \n to make a newline.
