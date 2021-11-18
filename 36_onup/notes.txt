@@ -1,0 +1,40 @@
+Brian Li + Robert
+APCS
+HW36 — All Quacked Up
+2021-11-17
+time spent: 0.7 hours
+
+- Compile-time errors mean there is an error in syntax. There is an error while compiling.
+  - Incremental development can alleviate these errors being produced.
+  - When the compiler finds an error, it is thrown off track and can report additional errors. Only the first error is reliable.
+  - The error message will tell you where the compiler was when it saw a problem. 
+  - In general, the error will be prior to the error message’s location. If not, broaden your search.
+  - Check semicolons, brackets, parentheses, spelling, and capitalization. Make sure you use the right quotation marks, and check invocations. 
+  - “non-static variable __ cannot be referenced from a static context” means you are trying to access a non-static variable in a static method.
+  - If it won’t compile, put a deliberate syntax error at the beginning of the program. If it works, you messed up the way you set up the development environment.
+  - DEBUGGING BY BISECTION: make a copy of your code, compile again, delete half, compile. Find the section of your code that is causing the error. Then bring back your working code.
+  - Don’t blindly follow what the compiler wants you to do to resolve error.
+- Run-time errors mean something goes wrong when the program is running. There is an error when running.
+  - If your program hangs, it is likely in an infinite loop or recursion.
+  - To check if it’s a loop causing it: add print statements before and after the loop and check if both get printed.
+  - Infinite recursions will often create a StackOverflowError. Make sure there is a base case and recursive case. Add a print at the beginning of the method that displays the parameters, and you should see it moving closer to the base case.
+  - Put print statements at the beginning of methods like “entering method __” to find out the flow of execution.
+  - NullPointerException - trying to access or invoke an instance variable/method that is null.
+  - ArrayIndexOutOfBoundsException - the index you are trying to access in an array is negative or > array.length - 1.
+  - FileNotFoundException - file not found
+  - ArithmeticException - error during arithmetic operation (divide by 0?)
+- Logic errors mean the program does not work as intended.
+  - Is there something that was supposed to happen but didn’t?
+  - Is there something happening that shouldn’t?
+  - Is a section of code producing an unexpected result?
+- General tips:
+  - Int division rounds towards zero.
+  - Floating points are only approximate.
+  - .equals() for objects, == for primitives.
+  - Override .equals() if you want another check of equivalence that isn’t checking identity.
+  - Check inheritance.
+  - Break down complex expressions into smaller expressions to be combined. Var names give additional documentation. Check precedence of operations in complex expressions. Temp variables allow you to check smaller parts and see their values, and what went wrong.
+  - Print does not print until the next newline. Println prints immediately.
+  - If there are too many print statements, comment them out or reduce them. Clean up code and reorganize it to make it easier to read.
+  - Take a breather, get another pair of eyes, consult the ducky.
+  - When you find the problem, rethink your algorithm, adjust your model, or just fix it. Think about why it happened in the first place.
