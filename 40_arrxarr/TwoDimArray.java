@@ -9,6 +9,16 @@
 // HW40 -- 2D arrays
 // 2021-11-30
 
+/*
+DISCO
+- You can use a for loop within a for loop to iterate through the different "layers" of arrays when it comes to arrays of arrays.
+- You can get the length of a subarray by doing array[row].length.
+- Subarrays still hold all properties of normal arrays.
+
+QCC
+- Are enhanced for loops always better when it comes to working with arrays? In what cases would you prefer a normal for loop?
+*/
+
 public class TwoDimArray
 {
   //postcond: prints each row of 2D int array a on its own line
