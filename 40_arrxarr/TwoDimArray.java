@@ -55,6 +55,7 @@ public class TwoDimArray
 
 
   // postcond: returns sum of all items in 2D int array a
+  //           uses a FOR loop
   public static int sum1( int[][] a )
   {
     int accumulator = 0;
@@ -73,6 +74,16 @@ public class TwoDimArray
   {
     int accumulator = 0;
     for (int i = 0; i < m.length; i++){
+      accumulator += sumRow(i, m);
+    }
+    return accumulator;
+  }
+
+  //postcond: returns sum of all items in 2D int array a
+  //          * uses helper fxn sumRow2
+  public static int sum3(int[][] m){
+    int accumulator = 0;
+    for(int i = 0; i < m.length; i++){
       accumulator += sumRow2(i, m);
     }
     return accumulator;
@@ -122,6 +133,10 @@ public class TwoDimArray
       System.out.println("sum m1 : " + sum2(m1));
       System.out.println("sum m2 : " + sum2(m2));
       System.out.println("sum m3 : " + sum2(m3));
+      System.out.print("testing sum3... \n");
+      System.out.println("sum m1 : " + sum3(m1));
+      System.out.println("sum m2 : " + sum3(m2));
+      System.out.println("sum m3 : " + sum3(m3));
       /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
