@@ -55,7 +55,6 @@ public class TwoDimArray
 
 
   // postcond: returns sum of all items in 2D int array a
-  //           uses a FOR loop
   public static int sum1( int[][] a )
   {
     int accumulator = 0;
