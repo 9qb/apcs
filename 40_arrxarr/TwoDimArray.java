@@ -18,6 +18,7 @@ DISCO
 
 QCC
 - Are enhanced for loops always better when it comes to working with arrays? In what cases would you prefer a normal for loop?
+- Is there a way to combine two for loops so that you don't need to use a loop within the loop?
 */
 
 public class TwoDimArray
