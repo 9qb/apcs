@@ -8,6 +8,7 @@
 // APCS pd6
 // HW40 -- 2D arrays
 // 2021-11-30
+// time spent: 0.6 hours
 
 /*
 DISCO
