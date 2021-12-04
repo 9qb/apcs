@@ -1,15 +1,15 @@
 // Peanut Butter and Nutella - Prattay Dey + Winnie, Brian Li + Robert, Nafiz Labib + Martha
 // APCS pd6
-// HW41 -- Rational numbers
-// 2021-12-01
-// time spent: 0.6 hours
+// HW42 -- Rational numbers
+// 2021-12-02
+// time spent: 0.8 hours
 
 /*
 DISCO
-- Instance variables with a protected visibility are still able to interact laterally (that is, they can interact with classes of the same type).
+- You can overload a method with a static and non-static version.
 
 QCC
-- Doubles are more precise than floats, so why do floats even exist?
+- Is there a more efficient way of adding and subtracting two rationals?
 */
 
 public class RationalDriver{
@@ -47,5 +47,53 @@ public class RationalDriver{
     System.out.println("b.toString(): " + b.toString());
     System.out.println("the float value of a: " + a.floatValue());
     System.out.println("the float value of b: " + b.floatValue());
+
+    // reset values
+    a = new Rational();
+    b = new Rational(3, 4);
+
+    a.add(c);
+    b.add(c);
+
+    System.out.println("\nAfter adding original value by c:");
+    System.out.println("a.toString(): " + a.toString());
+    a.reduce();
+    System.out.println("simplified a: " + a.toString());
+    System.out.println("b.toString(): " + b.toString());
+    b.reduce();
+    System.out.println("simplified b: " + b.toString());
+    System.out.println("the float value of a: " + a.floatValue());
+    System.out.println("the float value of b: " + b.floatValue());
+
+    // reset values
+    a = new Rational();
+    b = new Rational(3, 4);
+
+    a.subtract(c);
+    b.subtract(c);
+
+    System.out.println("\nAfter subtracting original value by c:");
+    System.out.println("a.toString(): " + a.toString());
+    a.reduce();
+    System.out.println("simplified a: " + a.toString());
+    System.out.println("b.toString(): " + b.toString());
+    b.reduce();
+    System.out.println("simplified b: " + b.toString());
+    System.out.println("the float value of a: " + a.floatValue());
+    System.out.println("the float value of b: " + b.floatValue());
+
+    // reset values
+    a = new Rational();
+    b = new Rational(3, 4);
+
+    System.out.println("\nComparing original values:");
+    System.out.println("comparing a to b: " + a.compareTo(b));
+    System.out.println("comparing a to c: " + a.compareTo(c));
+    System.out.println("comparing b to a: " + b.compareTo(a));
+    System.out.println("comparing b to c: " + b.compareTo(c));
+    System.out.println("comparing c to a: " + c.compareTo(a));
+    System.out.println("comparing c to b: " + c.compareTo(b));
+
+    System.out.println("comparing c to c: " + c.compareTo(c));
   }
 }
