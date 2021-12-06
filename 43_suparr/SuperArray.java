@@ -30,6 +30,7 @@ public class SuperArray
   public SuperArray()
   {
     _data = new int[10];
+    _size = _data.length;
   }
 
 
@@ -53,6 +54,7 @@ public class SuperArray
       temp[i] = _data[i];
     }
     _data = temp; // reassign _data
+    _size = _data.length;
   }
 
 
