@@ -75,11 +75,11 @@ public class SuperArray
   //adds an item after the last item
   public void add( int newVal )
   {
-    if (_size == _data.length - 1){
-      expand();
+    if (_size == _data.length - 1){ // checks if the size of the array is approaching its actual limit
+      expand(); // if so, expand!
     }
     set(_size, newVal);
-    _size++;
+    _size += 1;
   }
 
 
@@ -87,13 +87,14 @@ public class SuperArray
   public void add( int index, int newVal )
   {
     int[] temp = _data;
-    _data = new int[_size + 1];
-    for (int i = 0; i < index; i++){
-      _data[i] = temp[i];
+    _data = new int[_size + 2]; // +1 because _size starts at 0, +1 again because we are allocating space for one more index
+    for (int i = 0; i < index; i++){ // populates array until it reaches desired index
+      set(i, temp[i]);
     }
-    add(newVal);
-    for (int i = index; i < _size; i++){
-      _data[i + 1] = temp[i];
+    set(index, newVal); // adds new value at index
+    _size += 1; // increases _size by 1 due to adding new value
+    for (int i = index; i < _size; i++){ // shifts succeeding index values one right
+      set(i + 1, temp[i]);
     }
   }
 
@@ -102,15 +103,23 @@ public class SuperArray
   //shifts elements left to fill in newly-empted slot
   public void remove( int index )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    int[] temp = _data;
+    _data = new int[_size]; // +1 because _size starts at 0, -1 because we are removing one index
+    for (int i = 0; i < index; i++){ // populates array until it reaches desired index
+      set(i, temp[i]);
+    }
+    _size -= 1; // reduces _size by 1 due to removing new value
+    for (int i = index; i < _size; i++){ // shifts succeeding index values one left
+      set(i, temp[i + 1]);
+    }
   }
 
 
   //return number of meaningful items in _data
-  // public int size()
-  // {
-  //   /* YOUR IMPLEMENTATION HERE */
-  // }
+  public int size()
+  {
+    return _size;
+  }
 
 
 
@@ -149,12 +158,12 @@ public class SuperArray
       System.out.println("Printing populated SuperArray mayfield...");
       System.out.println(mayfield);
 
-      // mayfield.remove(3);
-      // System.out.println("Printing SuperArray mayfield post-remove...");
-      // System.out.println(mayfield);
-      // mayfield.remove(3);
-      // System.out.println("Printing SuperArray mayfield post-remove...");
-      // System.out.println(mayfield);
+      mayfield.remove(3);
+      System.out.println("Printing SuperArray mayfield post-remove...");
+      System.out.println(mayfield);
+      mayfield.remove(3);
+      System.out.println("Printing SuperArray mayfield post-remove...");
+      System.out.println(mayfield);
 
       mayfield.add(3,99);
       System.out.println("Printing SuperArray mayfield post-insert...");
