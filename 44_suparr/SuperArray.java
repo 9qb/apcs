@@ -1,7 +1,15 @@
-// Clyde "Thluffy" Sinclair
-// APCS1 pd0
+// Peanut Butter and Nutella - Prattay Dey + Winnie, Brian Li + Robert, Nafiz Labib + Martha
+// APCS1 pd6
 // HW44 -- expanding SuperArray functionality, encapsulation
-// 2021-12-08w
+// 2021-12-08
+// time spent: 0.5 hours
+
+/*
+DISCO
+- You can have multiple variables refer to the same array.
+QCC
+- Is there a better method to remove and/or add a value at an index?
+*/
 
 /***************************
  * class SuperArray version 2.0
