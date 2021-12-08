@@ -76,6 +76,9 @@ public class SuperArray
   {
     int temp = _data[index];
     _data[index] = newVal;
+    if (index + 1 > _size){
+      _size = index + 1;
+    }
     return temp;
   }
 
@@ -83,10 +86,10 @@ public class SuperArray
   //adds an item after the last item
   public void add( int newVal )
   {
-    if (_size == _data.length - 1){ // checks if the size of the array is approaching its actual limit
+    if (_size >= _data.length - 1){ // checks if the size of the array is approaching its actual limit
       expand(); // if so, expand!
     }
-    set(_size, newVal);
+    _data[_size] = newVal;
     _size += 1;
   }
 
@@ -97,12 +100,12 @@ public class SuperArray
     int[] temp = _data;
     _data = new int[_size + 2]; // +1 because _size starts at 0, +1 again because we are allocating space for one more index
     for (int i = 0; i < index; i++){ // populates array until it reaches desired index
-      set(i, temp[i]);
+      _data[i] = temp[i];
     }
-    set(index, newVal); // adds new value at index
+    _data[index] = newVal; // adds new value at index
     _size += 1; // increases _size by 1 due to adding new value
     for (int i = index; i < _size; i++){ // shifts succeeding index values one right
-      set(i + 1, temp[i]);
+      _data[i + 1] = temp[i];
     }
   }
 
