@@ -1,8 +1,8 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
-// HW47 -- ?
-// 2021-12-15w
-// time spent: _ hrs
+// Peanut Butter and Nutella - Prattay Dey + Winnie, Brian Li + Robert, Nafiz Labib + Martha
+// APCS pd6
+// HW47 -- Guess Again
+// 2021-12-14
+// time spent: 0.5 hours
 
 /***
  * class GuessNumber -- fun fun fun!
@@ -21,8 +21,10 @@
 
 /***
     DISCO:
+    - You can simply make a while loop run forever by putting (true) in the condition statement.
 
     QCC:
+    - Is there a better way of choosing a random integer within a range of values?
 
  ***/
 import java.util.Scanner;
@@ -48,12 +50,12 @@ public class GuessNumber
     _guessCtr = 1;
 
     //pick random number in range [a,b]
-
-    _target = (int)(Math.random()*(b+1) + a);
+    int diff = _hi - _lo;
+    _target = (int)(Math.random()*(diff + 1) + _lo);
   }
 
 
-  /*==================================================/* YOUR CODE HERE /*
+  /*==================================================
     void playRec() -- Prompts a user to guess until guess is correct.
     Uses recursion.
     ==================================================*/
@@ -89,6 +91,7 @@ public class GuessNumber
     }
 
     _guessCtr++;
+    playRec();
   }
 
 
@@ -139,7 +142,7 @@ public class GuessNumber
   public void play()
   {
     //use one or the other below:
-    //playRec();
+    // playRec();
     playIter();
   }
 
