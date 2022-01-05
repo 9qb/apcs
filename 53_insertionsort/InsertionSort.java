@@ -1,27 +1,35 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// Peanut Butter and Nutella - Prattay Dey + Winnie, Brian Li + Robert, Nafiz Labib + Martha
+// APCS pd6
 // HW53 -- implementing insertion sort
 // 2022-01-06r
-// time spent:  hrs
+// time spent: 0.4 hrs
 
 /******************************
  * class InsertionSort -- implements InsertionSort algorithm
  *
  * ALGO:
+ * With a partition within the dataset, beginning from the left, all values
+ * to the left of the partition are to be sorted. After sorting, the partition
+ * shifts one value right and the new inserted value is to be sorted accordingly
+ * with the other values to the left of the partition. This process repeats until
+ * there are no more values to the right of the partition.
  *
  * DISCO
+ * Insertion Sort has a very similar nested for loop as Bubble Sort.
  *
  * QCC
  * q0: How many passes to sort n elements?
- * a0:
+ * a0: n-1 passes
  * q1: What do you know after pass p?
- * a1:
+ * a1: The first p+1 elements are sorted relative to each other.
+ *     (assuming that the first element by itself does not count as a pass)
  * q2: How will you know when sorted?
- * a2:
+ * a2: There are no elements to the right of the partition.
  * q3: What constitues a pass?
- * a3:
+ * a3: The shift of the partition one element right and the sorting of all
+ *     elements to the left of that partition.
  * q4: What must you track?
- * a4:
+ * a4: The position of the partition.
  ******************************/
 
 
@@ -72,11 +80,13 @@ public class InsertionSort
 
         // "walk" the current item to where it belongs
         // by swapping adjacent items
-        // if index i < index i-1
+
+        // if index i < index i-1, swap
         if ((data.get(i)).compareTo(data.get(i-1)) < 0) {
 
           // System.out.println( "swap indices "+(i-1)+" & "+i+"..." ); //diag
 
+          // swap
           Comparable temp = data.get(i);
           data.set(i, data.get(i-1));
           data.set(i-1, temp);
