@@ -1,8 +1,8 @@
 // Peanut Butter and Nutella - Prattay Dey + Winnie, Brian Li + Robert, Nafiz Labib + Martha
 // APCS pd6
-// Lab04 -- Sort Algorithms
-// 2022-01-06
-// time spent: 0.6 hrs
+// HW54 -- My Sorts!
+// 2022-01-11
+// time spent: 0.5 hrs
 
 import java.util.ArrayList;
 
@@ -11,6 +11,13 @@ public class MySorts
   // VOID version of bubbleSort
   // Rearranges elements of input ArrayList
   // postcondition: data's elements sorted in ascending order
+
+  /*
+  In a dataset of n elements, n-1 passes are run on the dataset, each pass
+  resulting in the comparison of consecutive elements and swapping if necessary
+  to maintain ascending sortedness.
+  */
+
   public static void bubble( ArrayList<Comparable> data )
   {
     int totalPasses = 0;
@@ -37,15 +44,20 @@ public class MySorts
       }
       totalPasses += 1;
     }
-
-    System.out.println("total number of passes: \t" + totalPasses);
-    System.out.println("total number of comparisons: \t" + totalComparisons);
-    System.out.println("total number of swaps: \t\t" + totalSwaps);
   }
 
   // VOID version of bubbleSort WITH EXIT EARLY FUNCTIONALITY
   // Rearranges elements of input ArrayList
   // postcondition: data's elements sorted in ascending order
+
+  /*
+  In a dataset of n elements, n-1 passes are run on the dataset, each pass
+  resulting in the comparison of consecutive elements and swapping if necessary
+  to maintain ascending sortedness. This is an optimized version of Bubble Sort
+  featuring exit early functionality, as the list is deemed to already be sorted
+  if no swaps are made by the end of the first pass.
+  */
+
   public static void bubble_ee( ArrayList<Comparable> data )
   {
     int totalPasses = 0;
@@ -78,16 +90,19 @@ public class MySorts
         break;
       }
     }
-
-    System.out.println("total number of passes: \t" + totalPasses);
-    System.out.println("total number of comparisons: \t" + totalComparisons);
-    System.out.println("total number of swaps: \t\t" + totalSwaps);
   }
 
 
   // VOID version of SelectionSort
   // Rearranges elements of input ArrayList
   // postcondition: data's elements sorted in ascending order
+
+  /*
+  For a dataset of n elements, there are n-1 passes. In each pass, the largest
+  value is found and moved to the rightmost available index. Future passes find
+  the next largest value and move it to the next rightmost available index.
+  */
+
   public static void selection( ArrayList<Comparable> data )
   {
     //note: this version places greatest value at "rightmost" end
@@ -128,10 +143,6 @@ public class MySorts
       // System.out.println( "after swap: " +  data );//diag
       totalPasses += 1;
     }
-
-    System.out.println("total number of passes: \t" + totalPasses);
-    System.out.println("total number of comparisons: \t" + totalComparisons);
-    System.out.println("total number of swaps: \t\t" + totalSwaps);
   }//end selection
 
 
@@ -139,6 +150,14 @@ public class MySorts
   // VOID version of InsertionSort
   // Rearranges elements of input ArrayList
   // postcondition: data's elements sorted in ascending order
+
+  /*
+  In a dataset of n elements, there are n-1 passes. In each pass, all elements
+  bwfore the partition are sorted. The partition, which initially starts after
+  the 2nd element, is then moved one element right. This process continues each
+  pass.
+  */
+
   public static void insertion( ArrayList<Comparable> data )
   {
     int totalPasses = 0;
@@ -177,10 +196,6 @@ public class MySorts
       }
       totalPasses += 1;
     }
-
-    System.out.println("total number of passes: \t" + totalPasses);
-    System.out.println("total number of comparisons: \t" + totalComparisons);
-    System.out.println("total number of swaps: \t\t" + totalSwaps);
   }//end insertion
 
 
