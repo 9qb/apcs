@@ -73,8 +73,8 @@ public class OrderedArrayList{
     return _data.size();
   }
 
-	/*
-	Best case: Changing last element to value that still greater than all other values.
+  /*
+  Best case: Changing last element to value that still greater than all other values.
   Runtime Complexity: O(n)
   Why?
   By changing the last element in this manner, we are only iterating through the dataset
@@ -98,24 +98,24 @@ public class OrderedArrayList{
     return oldVal;
   }
 
-	/*
- 	Best case: There is enough empty indices within the array for all the data. The value
-  					 being added is larger than all the other elements in the dataset.
- 	Runtime Complexity: O(n)
- 	Why?
- 	Since order matters, the list is iterated through before adding newVal in the proper index.
+  /*
+  Best case: There is enough empty indices within the array for all the data. The value
+             being added is larger than all the other elements in the dataset.
+  Runtime Complexity: O(n)
+  Why?
+  Since order matters, the list is iterated through before adding newVal in the proper index.
   The value being larger than all other elements does not result in a shift of index for other
   elements in the dataset.
 
- 	Worst case: Array has to be expanded in order to accomodate newly added value. The value
+  Worst case: Array has to be expanded in order to accomodate newly added value. The value
               being added is less than all the other elements in the dataset.
- 	Runtime Complexity: O(n)
- 	Why?
- 	List is iterated through the first time with order in mind. If we need to expand the array,
+  Runtime Complexity: O(n)
+  Why?
+  List is iterated through the first time with order in mind. If we need to expand the array,
   we iterate through the ordered array again. On top of that, if the value being added is less
   than all the other elements in the dataset, it results in a shift of one index up for all other
   elements in the dataset.
-	*/
+  */
   // employs ArrayList's add(). index of insertion is based on the appropriate
   // index that maintains ascending order. proceeding values are shifted one index greater.
   public void add(int newVal){
@@ -131,11 +131,12 @@ public class OrderedArrayList{
     _data.add(newVal);
   }
 
-	/*
+  /*
   Best Case: Last element is removed.
   Runtime complexity: O(1)
   Why?
   Because it's the last element, you don't have to shift the elements down an index. Only one action: removing last element.
+  
   Worst Case: First element is removed.
   Runtime complexity: O(n)
   Why?
