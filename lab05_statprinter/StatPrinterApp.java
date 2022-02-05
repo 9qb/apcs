@@ -3,7 +3,7 @@ Team Team: Brian Li, Justin Mohabir, Neil Lin; Ducks: Robert, Hans, Hatch
 APCS pd 7
 L05 -- pulling it together
 2022-02-03
-time spent: 0.7 hrs
+time spent: 1 hrs
 */
 
 
@@ -21,10 +21,8 @@ public class StatPrinterApp
     /*=================
       data:
       [2,5,2,3,4,4,4]
-
       desired _freq:
       [0,0,2,1,3,1]
-
       freq initially:
       [0,0,0,0,0,0]
       =================*/

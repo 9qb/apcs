@@ -3,14 +3,12 @@ Team Team: Brian Li, Justin Mohabir, Neil Lin; Ducks: Robert, Hans, Hatch
 APCS pd 7
 L05 -- pulling it together
 2022-02-03
-time spent: 0.7 hrs
+time spent: 1 hrs
 */
 
 /**
    An AP-style question, for practice...
-
    GOAL: Write the StatPrinter class below.
-
    WHAT YOU NEED TO KNOW:
    The StatPrinter Object receives an
    ArrayList of nonnegative integers, then builds a frequency ArrayList in which
@@ -19,19 +17,16 @@ time spent: 0.7 hrs
    list would be [0,1,2,2,0,1]. This is read as 0 zeroes, 1 one, 2 twos,
    2 threes, 0 fours, 1 five. The size of the frequency list is the equal to
    the maximum value of the data.
-
    A capability of the class is to calculate local modes from the frequency
    list. A local mode is a value that is greater than the value at index-1
    and greater than the value at index+1. A local mode is never at the end
    points of the list. For example, if the frequency list is [1,2,1,4,2,3,5]
    then the local modes are 2 and 4.
-
    This class is also capable of printing a histogram of the frequencies, using
    '*'s to indicate a frequency amount. To print a histogram, the user specifies
    the longest sequence of '*'s used and then all other values are printed in
    proportion to this value. For example, if longest bar is 10 and the frequency
    list is [1,2,1,4,2,3,5] then the histogram printed looks like this:
-
    0 : **
    1 : ****
    2 : **
@@ -39,9 +34,7 @@ time spent: 0.7 hrs
    4 : ****
    5 : ******
    6 : **********
-
    For each method, state run time efficiency using Big O notation.
-
    TIPS FOR AWESOME:
    * Keys to Success were so named (by Thinkeren) for a reason.
    * Look over all fxns, think a bit, decide which to tackle first.
@@ -65,16 +58,19 @@ public class StatPrinter
   //          _frequency.get(i) returns frequency of i in data
   //eg, for data [2,3,2,5,2,3]
   //  _frequency would be [0,0,3,2,0,1]
+
+  // Big O of n^2, O(n^2)
+
   public StatPrinter( ArrayList <Integer> data )
   {
     int length = max(data) + 1;
     int ctr;
     for (int i = 0; i < length; i++){
-      ctr = 0;
+      ctr = 0; // ctr is initially at 0
       for (int j = 0; j < data.size(); j++ ){
-        if (data.get(j) == i){ ctr++; }
+        if (data.get(j) == i){ ctr++; } // if value i is found, increase ctr by 1
       }
-      _frequency.add(ctr);
+      _frequency.add(ctr); // add ctr to _frequncy (at index i of frequency)
     }
     // System.out.println(_frequency); // diag
   }
@@ -83,6 +79,9 @@ public class StatPrinter
   //*************** QUESTION 01 **************************
   //precond:  data.size() > 0
   //postcond: returns largest integer in data
+
+  // Big O of n, O(n)
+
   public Integer max( ArrayList <Integer> data )
   {
     int max = 0;
@@ -103,6 +102,9 @@ public class StatPrinter
   //    isLocalMode(0) -> false
   //    isLocalMode(1) -> true
   //    isLocalMode(5) -> true
+
+  // Big O of 1, O(1)
+
   public boolean isLocalMode( int i )
   {
     return (i > 0 && i < _frequency.size() - 1
@@ -113,6 +115,9 @@ public class StatPrinter
 
   //*************** QUESTION 04 **************************
   //postcond: returns list of modes in _frequency
+
+  // Big O of n, O(n)
+
   public ArrayList<Integer> getLocalModes()
   {
     ArrayList<Integer> modeList = new ArrayList();
@@ -127,16 +132,20 @@ public class StatPrinter
 
   //*************** QUESTION 05 **************************
   //precond:  longestBar > 0
+
+  // Big O of n^2, O(n^2)
+
   public void printHistogram( int longestBar )
   {
+    // ratio = number of stars per frequncy of 1
     double ratio = ((double)longestBar) / max(_frequency);
     int numStars = 0;
     String stars;
     for (int i = 0; i < _frequency.size(); i++){
       stars = "";
-      numStars = Math.round(Math.round(ratio * _frequency.get(i)));
+      numStars = Math.round(Math.round(ratio * _frequency.get(i))); // rounds double to int
       for (int j = 0; j < numStars; j++){
-        stars += "*";
+        stars += "*"; // accumulates number of stars for each index
       }
       System.out.println(i + ": " + stars);
     }
