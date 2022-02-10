@@ -170,11 +170,10 @@ public class Review {
     String review = textToString(fileName);
     while (review.length() > 0){
       temp = review.substring(0, temp.indexOf(" "));
-
+      totalSentimentVal += sentimentVal(temp);
       review = review.substring(temp.indexOf(" ") + 1);
-
     }
-
+    return totalSentimentVal;
   }
 
   // tests code, as instructed by student guide
