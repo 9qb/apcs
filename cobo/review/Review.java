@@ -1,3 +1,9 @@
+// Brian Li + Robert
+// APCS pd07
+// HW63 -- CoBo Lab #2
+// 2022-02-10
+// time spent: 1.3 hours
+
 import java.util.Scanner;
 import java.io.File;
 import java.util.HashMap;
