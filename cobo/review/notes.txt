@@ -54,12 +54,12 @@ Activity 4
 7. We can alter more than just adjectives to create a larger sense of a stronger review.
 
 Activity 5
-1. I like communicating in code/strange ways.
+1. We like communicating in code.
 
-2. I planned out how to reverse a word, and then applied that to larger phrases.
+2. We planned out how to reverse a word, and then applied that to larger phrases. We then repeated this process for ROT13.
 
 3. public static String reverseWord(String word)
-   I chose the parameter String word because I wanted to reverse the characters of a word. I made it static because this is a basic method that shouldn't require the instantiation of an object to be called.
+   We chose the parameter String word because we wanted to reverse the characters of a word. We made it static because this is a basic method that shouldn't require the instantiation of an object to be called.
 
 4. public static String reverso(String phrase){
      String reversedPhrase = "";
