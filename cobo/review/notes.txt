@@ -1,7 +1,7 @@
-// Brian Li + Robert
+// Team Team: Brian Li, Justin Mohabir, Neil Lin; Ducks: Robert, Hans, Hatch
 // APCS pd07
-// HW63 -- CoBo Lab #2
-// 2022-02-10
+// L06 -- Read/Review/Expand
+// 2022-02-11
 // time spent: 1.3 hours
 
 Activity 1

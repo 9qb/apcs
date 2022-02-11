@@ -1,7 +1,7 @@
-// Brian Li + Robert
+// Team Team: Brian Li, Justin Mohabir, Neil Lin; Ducks: Robert, Hans, Hatch
 // APCS pd07
-// HW63 -- CoBo Lab #2
-// 2022-02-10
+// L06 -- Read/Review/Expand
+// 2022-02-11
 // time spent: 1.3 hours
 
 import java.util.Scanner;
@@ -172,22 +172,24 @@ public class Review {
   // ===========================================================================
 
   // activity 2.1
+  // calculates the total sentiment of the words in a .txt file
   public static double totalSentiment(String fileName){
     double totalSentimentVal = 0;
     String temp = "";
     String review = textToString(fileName);
     review += " ";
     while (review.length() > 0 && review.indexOf(" ") > -1){
-      // System.out.println(review);
+      // System.out.println(review); // diag
       temp = removePunctuation(review.substring(0, review.indexOf(" ")));
       totalSentimentVal += sentimentVal(temp);
-      // System.out.println("index of space: " + review.indexOf(" "));
+      // System.out.println("index of space: " + review.indexOf(" ")); // diag
       review = review.substring(review.indexOf(" ") + 1);
     }
     return totalSentimentVal;
   }
 
   // activity 2.3
+  // calculates a star rating based on the sentiment of the words in a .txt file
   public static int starRating(String fileName){
     double temp = totalSentiment(fileName);
     if (temp < 0){
@@ -208,6 +210,8 @@ public class Review {
   }
 
   // activity 3.4 & 4.4
+  // generates a fake review, replacing adjectives prefixed with a *
+  // replacing adjective is determined based on the sentimentVal of the adj being replaced
   public static String fakeReview(String fileName){
     String original = textToString(fileName);
     original += " ";
@@ -223,7 +227,7 @@ public class Review {
         temp = removePunctuation(nextWord);
         nextWord = temp;
       }
-      if (nextWord.indexOf("*") != -1){
+      else{
         if (sentimentVal(nextWord.substring(1)) > 0){
           nextWord = randomPositiveAdj();
         }
