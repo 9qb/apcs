@@ -37,7 +37,7 @@ public class Review {
       Scanner input = new Scanner(new File("positiveAdjectives.txt"));
       while(input.hasNextLine()){
         String temp = input.nextLine().trim();
-        System.out.println(temp);
+        // System.out.println(temp);
         posAdjectives.add(temp);
       }
       input.close();
@@ -163,17 +163,75 @@ public class Review {
     }
   }
 
+  // ===========================================================================
+
   // activity 2.1
   public static double totalSentiment(String fileName){
     double totalSentimentVal = 0;
     String temp = "";
     String review = textToString(fileName);
-    while (review.length() > 0){
-      temp = review.substring(0, temp.indexOf(" "));
+    review += " ";
+    while (review.length() > 0 && review.indexOf(" ") > -1){
+      // System.out.println(review);
+      temp = removePunctuation(review.substring(0, review.indexOf(" ")));
       totalSentimentVal += sentimentVal(temp);
-      review = review.substring(temp.indexOf(" ") + 1);
+      // System.out.println("index of space: " + review.indexOf(" "));
+      review = review.substring(review.indexOf(" ") + 1);
     }
     return totalSentimentVal;
+  }
+
+  // activity 2.3
+  public static int starRating(String fileName){
+    double temp = totalSentiment(fileName);
+    if (temp < 0){
+      return 1;
+    }
+    else if (temp < 3){
+      return 2;
+    }
+    else if (temp < 6){
+      return 3;
+    }
+    else if (temp < 9){
+      return 4;
+    }
+    else{
+      return 5;
+    }
+  }
+
+  // activity 3.4 & 4.4
+  public static String fakeReview(String fileName){
+    String original = textToString(fileName);
+    original += " ";
+    String altered = "";
+    String nextWord = "";
+    String storedPunctuation = "";
+    String temp = "";
+
+    while (original.length() > 0 && original.indexOf(" ") > -1){
+      nextWord = original.substring(0, original.indexOf(" "));
+      storedPunctuation = getPunctuation(nextWord);
+      if (nextWord.indexOf("*") == -1){
+        temp = removePunctuation(nextWord);
+        nextWord = temp;
+      }
+      if (nextWord.indexOf("*") != -1){
+        if (sentimentVal(nextWord.substring(1)) > 0){
+          nextWord = randomPositiveAdj();
+        }
+        else{
+          nextWord = randomNegativeAdj();
+        }
+      }
+      altered += nextWord + storedPunctuation;
+      altered += " ";
+      original = original.substring(original.indexOf(" ") + 1);
+    }
+
+    altered.trim();
+    return altered;
   }
 
   // tests code, as instructed by student guide
@@ -184,6 +242,15 @@ public class Review {
     System.out.println(sentimentVal("hello"));
     System.out.println(sentimentVal("later"));
 
+    // activity 2.2
+    System.out.println(totalSentiment("SimpleReview.txt"));
+    System.out.println(totalSentiment("McDonaldsReview.txt"));
 
+    // activity 2.5
+    System.out.println(starRating("SimpleReview.txt"));
+    System.out.println(starRating("McDonaldsReview.txt"));
+
+    // testing fakeReview
+    System.out.println(fakeReview("SimpleReview.txt"));
   }
 }
