@@ -177,7 +177,7 @@ public class Review {
     double totalSentimentVal = 0;
     String temp = "";
     String review = textToString(fileName);
-    review += " ";
+    review += " "; // space character added so sentimentVal of last word is included
     while (review.length() > 0 && review.indexOf(" ") > -1){
       // System.out.println(review); // diag
       temp = removePunctuation(review.substring(0, review.indexOf(" ")));
@@ -214,7 +214,7 @@ public class Review {
   // replacing adjective is determined based on the sentimentVal of the adj being replaced
   public static String fakeReview(String fileName){
     String original = textToString(fileName);
-    original += " ";
+    original += " "; // space character added so last word is processed by the while loop
     String altered = "";
     String nextWord = "";
     String storedPunctuation = "";
@@ -223,24 +223,24 @@ public class Review {
     while (original.length() > 0 && original.indexOf(" ") > -1){
       nextWord = original.substring(0, original.indexOf(" "));
       storedPunctuation = getPunctuation(nextWord);
-      if (nextWord.indexOf("*") == -1){
+      if (nextWord.indexOf("*") == -1){ // remove punctuation if the word doesn't have *
         temp = removePunctuation(nextWord);
         nextWord = temp;
       }
       else{
-        if (sentimentVal(nextWord.substring(1)) > 0){
+        if (sentimentVal(nextWord.substring(1)) > 0){ // checks sentimentVal of word, excluding *
           nextWord = randomPositiveAdj();
         }
         else{
           nextWord = randomNegativeAdj();
         }
       }
-      altered += nextWord + storedPunctuation;
-      altered += " ";
-      original = original.substring(original.indexOf(" ") + 1);
+      altered += nextWord + storedPunctuation; // adds back punctuation, if present
+      altered += " "; // adds a space between words
+      original = original.substring(original.indexOf(" ") + 1); // removes the word from original
     }
 
-    altered.trim();
+    altered.trim(); // removes final space character
     return altered;
   }
 
