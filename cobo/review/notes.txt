@@ -4,6 +4,13 @@
 // 2022-02-11
 // time spent: 1.3 hours
 
+DISCO:
+- You can process the data within a .txt file with the class java.io.File.
+- You can use a HashMap to serve the purpose of a dictionary.
+
+QCC:
+- Is there much of a difference between a hashmap and two arrays (one array holds the data, the other holds its corresponding value)?
+
 Activity 1
 1a. public static double sentimentVal( String word )
 1b. It requires a String parameter. If another type of parameter is passed, there is an error.
