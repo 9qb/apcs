@@ -63,11 +63,11 @@ public class OpenEnded{
     if (!(lowercase.equals(word))){
       capitalizeFirstChar = true;
     }
-    for (int i = word.length() - 1; i > -1; i--){
+    for (int i = 0; i < word.length(); i++){
       if (LETTERS.indexOf(lowercase.substring(i, i+1)) > -1){ // letter in lowercase is present
         rotIndex = LETTERS.indexOf(lowercase.substring(i, i+1)) + 13;
-        if (LETTERS.indexOf(lowercase.substring(i, i+1)) + 14 > LETTERS.length()){
-          rotIndex = rotIndex - 26;
+        if (LETTERS.indexOf(lowercase.substring(i, i+1)) + 14 > LETTERS.length()){ // out of bounds
+          rotIndex = rotIndex - 26; // loops back around to find correct index of rotated character
         }
         rotated += LETTERS.substring(rotIndex, rotIndex + 1);
       }
