@@ -4,12 +4,12 @@ HW69 – Making Sense
 2022-03-02
 time spent: 0.8 hours
 
-Mean execution time using random starts    
-Possible Knight’s Tours                Impossible Knight’s Tours    
-n=5    20.738s    across 4 executions        122.103s
-n=6    64.938s    across 4 executions         incalculable
-n=7    676.567s    across 1 execution        incalculable
-n=8    907.039s    across 1 execution         incalculable
+Mean execution time using random starts	
+Possible Knight’s Tours				    Impossible Knight’s Tours	
+n=5	20.738s	across 4 executions		    122.103s
+n=6	64.938s	across 4 executions 		incalculable
+n=7	676.567s	across 1 execution		incalculable
+n=8	907.039s	across 1 execution 		incalculable
 
 
 Q0: From any starting position, can an open tour always be found? Explain.
