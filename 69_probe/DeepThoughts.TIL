@@ -1,0 +1,37 @@
+Team Bing Chilling - Brian Li, Lawrence Joa, Perry Huang Ducks: Robert, Steve, John, Salaj Jr.
+APCS pd07
+HW69 – Making Sense
+2022-03-02
+time spent: 0.8 hours
+
+Mean execution time using random starts	
+Possible Knight’s Tours				    Impossible Knight’s Tours	
+n=5	20.738s	across 4 executions		    122.103s
+n=6	64.938s	across 4 executions 		incalculable
+n=7	676.567s	across 1 execution		incalculable
+n=8	907.039s	across 1 execution 		incalculable
+
+
+Q0: From any starting position, can an open tour always be found? Explain.
+
+No, for 5x5 boards, there are some spots that are unable to complete a knight’s tour. For example, starting on the 2nd last square on the first row returns an unfinished board.
+
+Q1: Same, but for closed tour.
+
+No, for 5x5 boards, because some spots are unable to complete a tour at all. This can also be the case for bigger boards.
+
+Q2: How do you explain the increase in execution time as n increases?
+
+In an n x n chess board, there are n^2 cells. There is an exponential increase in the number of cells that the knight must go to, and an exponential increase in possible states. As a result, there is also an exponential increase in the execution time to accommodate for the knight traveling to the additional cells and backtracking.
+
+Q3: Thoughts on optimization?
+
+If there is an empty cell whose surrounding 8 possible source spots have already been traveled to or are part of the moat, then we know this branch does not work.
+If the runtime simply takes too long, get rid of the print statements that are not the finished product.
+
+Maze Algorithm: 
+From the start cell:
+Check adjacent cells for a possible untraveled space to travel to. 
+If there are no untraveled spaces, mark its current cell as being already traveled to and backtrack.
+Repeat until reaching the end cell.
+If we have backtracked all the way to the start cell, then there is no solution.
