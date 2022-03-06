@@ -1,11 +1,11 @@
-// Clyde Sinclair
-// APCS pd0
+// Team Bing Chilling - Brian Li, Lawrence Joa, Perry Huang; Ducks: Robert, Steve, John, Salaj Jr.
+// APCS pd7
 // HW69 -- maze solving (blind, depth-first)
 // 2022-03-03r
-// time spent:  hrs
+// time spent: 0.7 hrs
 
 /***
- * SKEELTON for
+ * SKELELTON for
  * class MazeSolver
  * Implements a blind depth-first exit-finding algorithm.
  * Displays probing in terminal.
@@ -15,11 +15,18 @@
  * (mazefile is ASCII representation of a maze, using symbols below)
  *
  * ALGORITHM for finding exit from starting position:
- *  <INSERT YOUR SUMMARY OF ALGO HERE>
+ *  From the start position:
+ *    Check adjacent cells for a path (clockwise precedence for direction)
+ *    If there are no possible paths, mark current cell as traveled to and
+ *    backtrack one cell.
+ *  Repeat until the end is reached.
  *
  * DISCO
+ * - A char uses single quotes, while a String uses double quotes.
  *
  * QCC
+ * - We saw our MazeSolver be able to successfully find a solution to a maze, but
+ *   taking a longer path than necessary. How can we optimize this?
  *
  ***/
 
@@ -131,34 +138,36 @@ class MazeSolver
 
     //primary base case
     // soln found
-    if ( _maze[x][y] == (EXIT) ) {
+    if ( _maze[x][y] == EXIT ) {
       _solved = true;
-	     return;
+	     System.out.println(this); // show the final product
+       System.exit(0); // ends program
     }
     //other base cases
-    // hits wall
-    else if (_maze[x][y] == WALL) {
+    // at invalid position
+    else if (!onPath(x,y)) {
       return;
     }
     //otherwise, recursively solve maze from next pos over,
     //after marking current location
     else {
-
-      _maze[x][y] = HERO;
-
-	    solve(x, y+1);
-      solve(x+1, y);
-      solve(x-1, y);
-      solve(x, y-1);
+      _maze[x][y] = HERO; // hero visits this cell
       System.out.println( this ); //refresh screen
-      _maze[x][y] = VISITED_PATH; // accomodates for dead end
+
+      // checks for next possible spot
+	    solve(x, y-1); // up
+      solve(x+1, y); // right
+      solve(x, y+1); // down
+      solve(x-1, y); // left
+
+      _maze[x][y] = VISITED_PATH; // marks cell as having been visited to
       System.out.println( this ); //refresh screen
     }
   }
 
   //accessor method to help with randomized drop-in location
   public boolean onPath( int x, int y) {
-    return _maze[x][y] == (PATH);
+    return _maze[x][y] == PATH;
   }
 
 }//end class MazeSolver
@@ -189,17 +198,17 @@ public class Maze
 
     //drop hero into the maze (coords must be on path)
     // ThinkerTODO: comment next line out when ready to randomize startpos
-    ms.solve( 2, 3 );
+    // ms.solve( 2, 3 );
 
     //drop our hero into maze at random location on path
-    // int startX = (int)(Math.random() * 25);
-    // int startY = (int)(Math.random() * 25) + 1;
-    // // change later
-    // while (!(ms.onPath(startX, startY))){
-    //   startX = (int)(Math.random() * 25);
-    //   startY = (int)(Math.random() * 25) + 1;
-    // }
-    // ms.solve( startX, startY );
+    int startX = (int)(Math.random() * 25);
+    int startY = (int)(Math.random() * 25);
+    // keep going until finding valid pos
+    while (!(ms.onPath(startX, startY))){
+      startX = (int)(Math.random() * 25);
+      startY = (int)(Math.random() * 25);
+    }
+    ms.solve( startX, startY );
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
