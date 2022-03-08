@@ -37,8 +37,8 @@
  *
  * q0: What does it do?
  * a0: Partitions an int array into two subarrays.
- *     Elements to the left of splitIndex are less than splitValue.
- *     Elements to the right of splitIndex are greater than splitValue.
+ *     Elements to the left of splitVal are less than splitValue.
+ *     Elements to the right of splitVal are greater than splitValue.
  *     Adjusts the splitValue to the index that satisfies the above.
  *
  * q1: O(?)
