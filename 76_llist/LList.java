@@ -3,6 +3,7 @@
 //HW76 - We Got a Little Ol' Convoy
 //2022-03-14w
 //time spent: 0.5 hr + class time
+//KtS consumed: 2 sheets
 
 /*
 DISCO
