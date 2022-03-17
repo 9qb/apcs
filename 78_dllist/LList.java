@@ -104,7 +104,7 @@ public class LList implements List //interface def must be in this dir
 
 		retStr = (temp.getNext()).getCargo();
 		temp.setNext((temp.getNext()).getNext());
-    // temp.getNext().setPrev(temp); // changing prevNode breaks code? why?
+    // temp.getNext().getNext().setPrev(temp); // changing prevNode breaks code? why?
 
     _size--;
 		return retStr;
