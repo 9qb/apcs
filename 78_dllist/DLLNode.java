@@ -1,9 +1,30 @@
 //(P)BNJ -- Brian Li, Jefford Shau, Nakib Abedin
 //APCS pd07
-//HW77 - Insert|Remove
-//2022-03-15w
-//time spent: 0.5 hr + class time
-//KtS consumed: 2 sheets
+//HW78 - Double Up
+//2022-03-16r
+//time spent: 2.5 hr + class time
+// KTS consumed: 2 keys
+
+/*
+DISCO:
+ - We can use _tail to quickly indentify the last node in the LList.
+QCC:
+  - Why are Doubly-Linked Lists useful?
+  - Why did our code remove 2 or 3 items during our first attmept?
+  - Why does attempting to set a prevNode break our remove() algo?
+ALGO ADD:
+  - If size 0, create a new DLLNode and point _head to that node
+  - Else, traverse to the given index
+  - Clone the DLLNode at the index. The clone's prevNode points to the original node.
+  - Set the cargo of the original node to the newVal and set its nextNode to the clone.
+ALGO REM:
+  - If index is 0, move the _head pointer over one place to the right
+  - Else, traverse index-1
+  - Store the cargo in the node of index-1
+  - Set the nextNode of the node of index-1 to 2 nodes over.
+  - Housekeeping
+  - Return stored cargo
+*/
 
 /***
  * class DLLNode
