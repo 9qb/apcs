@@ -2,7 +2,7 @@
 //APCS pd07
 //L07 - But These Go Up To Eleven
 //2022-03-20
-//time spent: 2.0 hr + class time
+//time spent: 2.0 hrs + class time
 
 /*
 DISCO
