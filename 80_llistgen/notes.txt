@@ -1,0 +1,16 @@
+//(P)BNJ -- Brian Li, Jefford Shau, Nakib Abedin
+//APCS pd07
+//HW80 - Generically Speaking
+//2022-03-23r
+//time spent: 0.6 hrs + class time
+
+/*
+DISCO
+- You cannot use a primitive to parameterize an object.
+- Include <name> in the header of a class to parameterize it.
+- A class that is parameterized can still be instantiated when the
+  variable type is not parameterized.
+
+QCC
+- Why can we not use primitives to parameterize an object?
+*/
