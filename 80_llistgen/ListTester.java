@@ -75,7 +75,7 @@ public class ListTester
     System.out.println();
 
     // instantiate new LList of ints
-    LList<int> intList = new LList();
+    LList<Integer> intList = new LList();
     intList.add(23);
     intList.add(30);
     intList.add(77);
