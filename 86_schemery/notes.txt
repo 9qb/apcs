@@ -1,0 +1,35 @@
+//(P)BNJ -- Brian Li, Jefford Shau, Nakib Abedin
+//APCS pd07
+//HW86 - What a Racket
+//2022-03-31r
+//time spent: 1.7 hrs + class time
+
+/*
+DISCO
+- .split() makes it much easier to eliminate whitespace.
+- You can use multiple stacks to track different things.
+
+QCC
+- Is there a better way to do subtraction with a stack?
+*/
+
+/***
+ * class Scheme
+ * Simulates a rudimentary Scheme interpreter
+ *
+ * ALGORITHM for EVALUATING A SCHEME EXPRESSION:
+ *   1. Split the string into an array of strings, without the whitespace
+     2. Push strings into corresponding stack (operation, everything else)
+     3. If the string is a closing paren, evaluate all values before the next
+        open paren.
+          Your operation is popped from the operation stack.
+          Your values are popped from the arr stack.
+          Pop the opening paren in the arr stack, and then push the evaluated
+          value to the arr stack.
+     4. Repeat until you have iterated thru the entire expression.
+     5. Return the popped value of the arr stack, which is your final answer.
+ *
+ * STACK OF CHOICE: Stack by java.util.Stack
+ * b/c ... An imported library eliminates clutter, and there is no limitation
+           on the length of the Stack.
+ **/
