@@ -4,10 +4,8 @@ APCS pd07
 HW87 -- Queues
 2022-04-01
 Time Spent: .5 hrs + classtime
-
 DISCO:
 1) Queues are Stacks but FIFO instead of FILO
-
 QCC:
 1) What types of problems are Nodes useful for?
 2) Could we have made our dequeue method constant runtime with a _tail pointer?
@@ -25,15 +23,24 @@ public NodeQueue(){
   //means of removing an element from collection:
   //Dequeues and returns the first element of the queue.
   public QUASAR dequeue(){
-    QNode<QUASAR> tmp = _front;
-    QUASAR retVal;
-    for(int i = 0; i < _size-2; i++){
-        tmp = tmp.getNext();
+    if (_size == 0) {
+      return null;
     }
-    retVal = tmp.getNext().getCargo();
-    tmp.setNext(null);
-    _size--;
-    return retVal;
+    else if (_size == 1) {
+      _size --;
+      return _front.setCargo(null);
+    }
+    else{
+      QNode<QUASAR> tmp = _front;
+      QUASAR retVal;
+      for(int i = 0; i < _size-2; i++){ //traverse to second to first node
+          tmp = tmp.getNext();
+        }
+        retVal = tmp.getNext().getCargo();
+        tmp.setNext(null);
+        _size--;
+      return retVal;
+    }
   }
 
   //means of adding an element to collection:
@@ -111,29 +118,22 @@ private class QNode<QUASAR>
 
 }//end class QNode
 
-/*
+
 public static void main(String[] args) { // for testing
     NodeQueue<String> test = new NodeQueue<String>();
     test.enqueue("hi");
     System.out.println(test);
-
     test.enqueue("bye");
     System.out.println(test);
-
     test.enqueue("hola");
     System.out.println(test);
-
     test.enqueue("adios");
     System.out.println(test);
-
     test.dequeue();
     System.out.println(test);
-
     test.dequeue();
     System.out.println(test);
-
     test.dequeue();
     System.out.println(test);
 }
-*/
 }
