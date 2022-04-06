@@ -1,19 +1,29 @@
 Team (P)BNJ :: Brian Li, Nakib Abedin, Jefford Shau
 APCS pd07
 LAB08 -- America's Next Top Data Scientist
-2022-04-05
-time spent: 0.7 hrs + class time
+2022-04-06
+time spent: 1.5 hrs + class time
 
 DISCO
 - You can use -classpath as a flag for javac to compile a file with more functionality.
+- You can use -d as a flag to set the directory of class files to be compiled.
+- Forced add sinbad.jar file to github repo using git add -f sinbad.jar.
+- We modified the
 
 QCC
 - What exactly does sinbad.jar supply?
+- What is the purpose of a .jar file? (QAF)
 
 (P)BNJ's CSV FLOW:
 <insert your description of your tools and workflow in creating, editing CSV files>
-TBD
+- Use DataSource.connect() and .load() to access an online .xml file.
+- Use fetchFloat() method to extract and return information from servers in dataType float.
+- Use fetchString() method to extract and return information from servers in dataType String.
+- Use fetch() method to extract and return multiple information from servers at once.
+- Use fetchList() method to extract and return information from servers in a list.
+
 
 TRUBZ
-using -classpath and sinbad.jar was difficult using Windows. the supplied commands
-worked flawlessly on Mac.
+<this lab involves using tools that are likely to introduce hiccups; log any troubleshooting issues here>
+- Compiling the .class files with -classpath and sinbad.jar was difficult on Windows. The given commands worked flawlessly on Mac.
+- The .gitignore file on our github repos ignores the sinbad.jar file.

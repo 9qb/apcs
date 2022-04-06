@@ -1,8 +1,8 @@
 // Team (P)BNJ :: Brian Li, Nakib Abedin, Jefford Shau
 // APCS pd07
 // LAB08 -- America's Next Top Data Scientist
-// 2022-04-05
-// time spent: 0.7 hrs + class time
+// 2022-04-06
+// time spent: 1.5 hrs +  2 days of class time
 
 /*
  Represents information about a NWS weather station
@@ -31,6 +31,11 @@ public class WeatherStation {
    /* Produce the name of this station */
    public String getName() {
       return name;
+   }
+
+   /* Produce the latitude of this station */
+   public double getLat() {
+      return lat;
    }
 
    /* Determine if this weather station is located in the given state */
