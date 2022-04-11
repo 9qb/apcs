@@ -1,33 +1,39 @@
-import java.util.LinkedList;
+import java.util.ArrayList;
 
-public class LLQueue<QUASAR> implements Queue<QUASAR>{
-  private LinkedList<QUASAR> ll;
+public class ALQueue<QUASAR> implements Queue<QUASAR>{
+  private ArrayList<QUASAR> al;
 
-  public LLQueue(){
-    ll = new LinkedList<QUASAR>();
+  public ALQueue(){
+    al = new ArrayList<QUASAR>();
   }
 
   //~~~~~~~~~~~~~~~~~~begin AP subset~~~~~~~~~~~~~~~~~~
   //means of removing an element from collection:
   //Dequeues and returns the first element of the queue.
   public QUASAR dequeue(){
-    return ll.remove();
+    if (!al.isEmpty()){
+      return al.remove(0);
+    }
+    else { return null; }
   }
 
   //means of adding an element to collection:
   //Enqueue an element onto the back of this queue.
   public void enqueue( QUASAR x ){
-    ll.addLast(x);
+    al.add(x);
   }
 
   //Returns true if this queue is empty, otherwise returns false.
   public boolean isEmpty(){
-    return ll.size() == 0;
+    return al.isEmpty();
   }
 
   //Returns the first element of the queue without dequeuing it.
   public QUASAR peekFront(){
-    return ll.peekFirst();
+    if (!al.isEmpty()){
+      return al.get(0);
+    }
+    else { return null; }
   }
   //~~~~~~~~~~~~~~~~~~~end AP subset~~~~~~~~~~~~~~~~~~~
 }
