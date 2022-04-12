@@ -10,10 +10,10 @@
 These methods are necessary to add elements in both directions of the Deque.
 
 ### Remove Methods
-`public E remove()` - removes the element at the front of the Deque
-`public boolean remove(Object o)` - removes first instance of o in the Deque
-`public E removeFirst()` - removes the element at the front of the Deque
-`public E removeLast()` - removes the element at the end of the Deque
+`public E remove()` - removes the element at the front of the Deque <br>
+`public boolean remove(Object o)` - removes first instance of o in the Deque <br>
+`public E removeFirst()` - removes the element at the front of the Deque <br>
+`public E removeLast()` - removes the element at the end of the Deque <br>
 
 These methods are necessary to remove elements in both directions of the Deque.
 
