@@ -2,6 +2,7 @@
 // APCS pd07
 // HW90 -- Deque and Implement
 // 2022-04-12
+// time spent: 0.5 hrs + class time
 
 import java.util.LinkedList;
 
