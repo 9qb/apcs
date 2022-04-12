@@ -1,0 +1,31 @@
+# Team (P)BNJ's Deque
+## Members: Brian Li, Nakib Abedin, Jefford Shau
+
+## Methods
+### Add Methods
+`public boolean add(E e)` - adds e to the end of the Deque and returns true
+`public void addFirst(E e)` - adds e to the front of the Deque
+`public void addLast(E e)` - adds e to the end of the Deque
+
+These methods are necessary to add elements in both directions of the Deque.
+
+### Remove Methods
+`public E remove()` - removes the element at the front of the Deque
+`public boolean remove(Object o)` - removes first instance of o in the Deque
+`public E removeFirst()` - removes the element at the front of the Deque
+`public E removeLast()` - removes the element at the end of the Deque
+
+These methods are necessary to remove elements in both directions of the Deque.
+
+### Peek Methods
+`public E peek()` - returns element at front of the Deque
+`public E peekFirst()` - returns element at front of the Deque
+`public E peekLast()` - returns element at end of the Deque
+
+These methods allow us to view elements at both ends of the Deque.
+
+### Other Methods
+`public boolean isEmpty()` - returns true if Deque is empty, false otherwise
+`public int size()` - returns number of elements in the Deque
+`public void clear()` - clears the Deque
+`public boolean contains(Object o)` - returns true if o is found within the Deque, false otherwise
