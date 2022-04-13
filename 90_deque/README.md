@@ -32,7 +32,8 @@ These methods allow us to view elements at both ends of the Deque.
 
 These are methods that provide additional information about the Deque, and aid in manipulating the Deque.
 
-### Plan of Attack
-- Determine what library will be used (LL or AL?)
-- Work on isEmpty() and size() first, then work on Add, then Remove, then Peek methods. 
+### Plan of Attack (To-Do List)
+- Design Decisions: Determine what library will be used (LL or AL?)
+  - We chose to use LinkedLists.
+- Work on isEmpty() and size() first, then work on Add, then Remove, then Peek methods.
 - Check what methods can be easily optimized via passthru before implementation.

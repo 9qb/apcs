@@ -1,8 +1,8 @@
 // Team (P)BNJ - Brian Li, Nakib Abedin, Jefford Shau
 // APCS pd07
-// HW90 -- Deque and Implement
-// 2022-04-12
-// time spent: 0.5 hrs + class time
+// HW91 -- Deque the Halls
+// 2022-04-13
+// time spent: 0.1 hrs + class time
 
 import java.util.LinkedList;
 
@@ -74,5 +74,9 @@ public class PBNJ<E> implements Deque<E>{
 
   public boolean contains(Object o){
     return ll.contains(o);
+  }
+
+  public String toString(){
+    return ll.toString();
   }
 }

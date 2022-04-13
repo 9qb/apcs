@@ -1,11 +1,19 @@
-// Team (P)BNJ - Brian Li, Nakib Abedin, Jefford Shau
-// APCS pd07
-// HW90 -- Deque and Implement
-// 2022-04-12
-// time spent: 0.5 hrs + class time
+Team (P)BNJ - Brian Li, Nakib Abedin, Jefford Shau
+APCS pd07
+HW90 -- Deque and Implement
+2022-04-12
+time spent: 0.5 hrs + class time
 
 DISCO
 - Deque works with on both ends, with methods that generally come in pairs (one works on first, one works on last).
 
 QCC
 - Is it necessary to implement offer and poll when they essentially serve the same purpose as add and remove?
+
+2022-04-13
+
+DISCO
+- LinkedList inherits toString method from AbstractSequentialList.
+
+QCC
+- Should we add toString method from LinkedList to Deque interface?
