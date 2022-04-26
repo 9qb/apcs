@@ -68,7 +68,7 @@ public class Celebrity
 	// @Override
 	public String toString()
 	{
-		return _name;
+		return "The celebrity is " + _name + ". The clue is " + _clue + ".";
 	}
 
 	public static void main(String[] args) {
