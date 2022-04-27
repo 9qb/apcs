@@ -4,7 +4,7 @@
 // 2022-04-26
 // time spent: 0.7 hrs + class time
 
-package celeb;
+// package celeb;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;

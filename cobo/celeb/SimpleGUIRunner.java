@@ -1,4 +1,4 @@
-package celeb;
+// package celeb;
 
 import javax.swing.JFrame;
 

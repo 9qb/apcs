@@ -4,7 +4,7 @@
 // 2022-04-26
 // time spent: 0.7 hrs + class time
 
-package celeb;
+// package celeb;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -185,6 +185,7 @@ public class StartPanel extends JPanel
   private void setupPanel()
   {
     // Adds the RadioButtons to the group so only one can be selected.
+    // TBA
   }
 
   /**
