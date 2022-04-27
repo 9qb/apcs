@@ -6,8 +6,8 @@
 - ~Instantiate methods of Celebrity, add instance variables (Act 2)~
 - ~Test Celebrity's methods, ensure it works~
 - ~Instantiate methods of CelebrityGame, add instance variables (Act 3)~
-- Extend Celebrity to work with different types of Celebrities. Alter methods accordingly. (Act 4)
-- Set up GUI, update CelebrityFrame to work with CelebrityGame.
+- ~Extend Celebrity to work with different types of Celebrities. Alter methods accordingly. (Act 4)~
+- Set up GUI, update CelebrityFrame to work with CelebrityGame. (Act 3, Act 4)
 - Open-Ended Activity (maybe?)
 
 ### Experience
