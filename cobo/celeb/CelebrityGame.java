@@ -2,7 +2,7 @@
 // APCS pd07
 // L09 - Some Folks Call It A Charades
 // 2022-04-26
-// time spent: 0.7 hrs + class time
+// time spent: 1.2 hrs + class times
 
 // package celeb;
 
@@ -138,14 +138,19 @@ public class CelebrityGame
 		if (clue.trim().length() >= 10){
 			validClue = true;
 			if (type.equalsIgnoreCase("literature")){
-				String[] temp = clue.split(",");
-				if (temp.length > 1){ validClue = true; }
-				else { validClue = false; }
+				if (clue.indexOf(",") != -1) {
+					 String[] temp = clue.split(",");
+				}
 			}
 			else if (type.equalsIgnoreCase("sports")){
-				String[] temp = clue.split(",");
-				if (temp.length > 1){ validClue = true; }
-				else { validClue = false; }
+				if (clue.indexOf(",") != -1) {
+						String[] temp = clue.split(",");
+				}
+			}
+			else {
+				if (clue.indexOf(",") != -1) {
+						String[] temp = clue.split(",");
+				}
 			}
 		}
 		return validClue;

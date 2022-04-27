@@ -2,9 +2,8 @@
 // APCS pd07
 // L09 - Some Folks Call It A Charades
 // 2022-04-26
-// time spent: 0.7 hrs + class time
+// time spent: 1.2 hrs + class time
 
-// package celeb;
 
 /**
  * Celebrity base class for the Celebrity game.
@@ -76,7 +75,14 @@ public class Celebrity
 	// @Override
 	public String toString()
 	{
-		return "The celebrity is " + _name + ". The clue is " + _clue + ".";
+		String dsc = "This is the sports celebrity: " + getAnswer() + "\nThe clues are:\n";
+
+		for (String word : this.getClue().split(","))
+		{
+			dsc += word + "\n";
+		}
+
+		return dsc;
 	}
 
 	public static void main(String[] args) {

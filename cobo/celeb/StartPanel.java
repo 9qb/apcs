@@ -2,7 +2,7 @@
 // APCS pd07
 // L09 - Some Folks Call It A Charades
 // 2022-04-26
-// time spent: 0.7 hrs + class time
+// time spent: 1.2 hrs + class time
 
 // package celeb;
 
@@ -177,7 +177,8 @@ public class StartPanel extends JPanel
     {
       validClue = controller.validateClue(clueText, "Sport");
     }
-    else if(literatureRadio.isSelected()){
+    else if (literatureRadio.isSelected())
+    {
       validClue = controller.validateClue(clueText, "Literature");
     }
     else
@@ -264,8 +265,8 @@ public class StartPanel extends JPanel
 
     //Put your custom radio button info here
 
-    panelLayout.putConstraint(SpringLayout.NORTH, literatureRadio, 20, SpringLayout.SOUTH, celebrityRadio);
-    panelLayout.putConstraint(SpringLayout.WEST, literatureRadio, 0, SpringLayout.WEST, celebrityRadio);
+    panelLayout.putConstraint(SpringLayout.NORTH, literatureRadio, 10, SpringLayout.SOUTH, sportRadio);
+    panelLayout.putConstraint(SpringLayout.WEST, literatureRadio, 0, SpringLayout.WEST, sportRadio);
 
 
     panelLayout.putConstraint(SpringLayout.NORTH, clueLabel, 10, SpringLayout.SOUTH, answerField);

@@ -2,12 +2,13 @@
 // APCS pd07
 // L09 - Some Folks Call It A Charades
 // 2022-04-26
-// time spent: 0.7 hrs + class time
+// time spent: 1.2 hrs + class time
 
 DISCO
-- In order to have a GUI work, you must declare its package.
-- Also, run the file outside of its package's directory.
+- You can create a GUI creates an interactive interface in which you can click buttons and type in inputs
+- Before setting up the GUI, always set up the base version first (it should work in the terminal)
+- make sure to use the setVisible(true) call in order to make sure everything shows up in the GUI
 
 QCC
-- What makes a GUI different from a class?
 - We are planning to skip over the useless questions. We will do the open-ended activity if time permits.
+- Is there any other way to set up a GUI in java?
