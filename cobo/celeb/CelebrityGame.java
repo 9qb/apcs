@@ -1,3 +1,11 @@
+// Team (P)BNJ - Brian Li, Nakib Abedin, Jefford Shau
+// APCS pd07
+// L09 - Some Folks Call It A Charades
+// 2022-04-26
+// time spent: 0.7 hrs + class time
+
+package celeb;
+
 import java.util.ArrayList;
 
 /**
@@ -138,6 +146,7 @@ public class CelebrityGame
 	 */
 	public String sendClue()
 	{
+		if (celebGameList.size() == 0){ return ""; }
 		return gameCelebrity.getClue();
 	}
 
@@ -149,6 +158,7 @@ public class CelebrityGame
 	 */
 	public String sendAnswer()
 	{
+		if (celebGameList.size() == 0){ return ""; }
 		return gameCelebrity.getAnswer();
 	}
 }

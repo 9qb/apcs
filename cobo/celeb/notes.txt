@@ -1,0 +1,13 @@
+// Team (P)BNJ - Brian Li, Nakib Abedin, Jefford Shau
+// APCS pd07
+// L09 - Some Folks Call It A Charades
+// 2022-04-26
+// time spent: 0.7 hrs + class time
+
+DISCO
+- In order to have a GUI work, you must declare its package.
+- Also, run the file outside of its package's directory.
+
+QCC
+- What makes a GUI different from a class?
+- We are planning to skip over the useless questions. We will do the open-ended activity if time permits.

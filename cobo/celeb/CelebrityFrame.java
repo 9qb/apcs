@@ -1,3 +1,11 @@
+// Team (P)BNJ - Brian Li, Nakib Abedin, Jefford Shau
+// APCS pd07
+// L09 - Some Folks Call It A Charades
+// 2022-04-26
+// time spent: 0.7 hrs + class time
+
+package celeb;
+
 import java.awt.CardLayout;
 
 import javax.swing.JFrame;
@@ -10,29 +18,29 @@ import javax.swing.JPanel;
  */
 public class CelebrityFrame extends JFrame
 {
-	//Data members for the JFrame subclass instance 
-	
+	//Data members for the JFrame subclass instance
+
 	/**
 	 * The instance of the panel used for playing the game.
 	 */
 	private CelebrityPanel gamePanel;
-	
+
 	/**
 	 * Blank panel used for the CardLayout switching screens feature.
 	 */
 	private JPanel panelCards;
-	
+
 	/**
 	 * The instance variable used to add a celebrity to the game.
 	 */
 	private StartPanel startPanel;
-	
+
 	/**
 	 * A reference to the CelebrityGame instance to allow for minimized coupling in the object structure.
 	 */
 	private CelebrityGame controller;
-	
-	
+
+
 	/**
 	 * Builds an instance of the CelebFrame with a reference to the CelebrityGame instance.
 	 * @param controller A reference to a CelebrityGame to share with the CelebPanel instance.
@@ -41,24 +49,26 @@ public class CelebrityFrame extends JFrame
 	{
 		//The first line of any subclass should ALWAYS be a correct call to the super constructor.
 		super();
-	
+		controller = controllerRef;
+		setupFrame();
+
 	}
-	
+
 	/**
 	 * Configures the JFrame window subclass to add the panel and set size based information.
 	 */
 	private void setupFrame()
 	{
-		
+
 	}
-	
+
 	/**
 	 * Swaps the screen between the existing panels based on the String parameter.
 	 * @param screen The name of the screen to open.
 	 */
 	public void replaceScreen(String screen)
 	{
-		
+
 	}
-	
+
 }
