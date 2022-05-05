@@ -26,7 +26,7 @@ A tree always grows downwards.
 A tree is a path whose nodes are connected via an open tour, where each node is traveled to once and only once.
 
 -- Why is a balanced tree allowed a difference of 1 in height between right and left subtrees?
-In the case of a depth-first processing of the tree, a tree with a minimal difference between subtrees allows for maximum efficiency. We can travel to any node much faster if the tree is balanced.
+In the case of a depth-first processing of the tree, a tree with a minimal difference between subtrees allows for maximum efficiency. We can travel to any node much faster if the tree is balanced. It is unlikely that a tree's subtrees are equal in height, so a difference of 1 is optimal.
 
 -- Alternate (equivalent, but more succinct?) definitions of "balanced" tree?
 A tree whose subtree heights are within one level of each other.
