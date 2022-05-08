@@ -1,0 +1,89 @@
+(P) BNJ -- Brian Li, Nakib Abedin, Jefford Shau
+APCS pd07
+HW94 -- reverse engineering
+2022-05-09m
+time spent: 0.7  hrs
+
+
+DISCO
+------------------------------------------------
+* We noticed that you can use recursion to find the binary tree using the information of two traversals. 
+================================================
+
+
+QCC
+------------------------------------------------
+* We had trouble wording the algorithms. 
+================================================
+
+
+HOW KEEN ARE YOUR POWERS OF OBSERVATION?
+------------------------------------------------
+Q: For a given binary tree, how many unique pre-order traversals are there?
+A: One
+
+Q: For a given binary tree, how many unique in-order traversals are there?
+A: One
+
+Q: For a given binary tree, how many unique post-order traversals are there?
+A: One
+
+Q: For a given traversal, how many unique trees could have produced it?
+A: Infinite, as long as only ONE traversal is given and there are no restrictions on the type of tree.
+
+Q: Given a pre-order traversal, what can you infer about its tree?
+A: You can infer that the first node is the root node. 
+
+Q: Given a post-order traversal, what can you infer about its tree?
+A: You can infer that the last node is the root node.
+
+Q: What does "1-to-1" mean?
+A:  1 to 1 means that there is a direct relationship between two things (i.e. they can only lead to the other and vice versa. There can’t be a possibility of one thing leading to a different outcome).
+
+Q: What does "onto" mean?
+A:  In reference to graphs, “onto” describes a situation where one item links to another (i.e. it maps “onto” the other).
+
+================================================
+
+
+ALGO for IN-ORDER + PRE-ORDER
+------------------------------------------------
+givens: an in-order traversal and a pre-order traversal of the same binary tree
+
+procedure:
+- Find the root node, which is the first node of the pre-order traversal. 
+- Find the corresponding node in the in-order traversal and partition it into a left and right subtree.
+- Find the middle node of each subtree of the in-order traversal. These are the children of the partition node mentioned above.
+- Partition the subtrees again, repeating the process until a subtree consists of only one node. The tree is finished.
+NOTE: If a subtree has an even number of nodes, check which node appears earliest in the pre-order traversal. That will be the partition node.
+
+================================================
+
+
+ALGO for POST-ORDER + IN-ORDER 
+------------------------------------------------
+givens: an in-order traversal and a post-order traversal of the same binary tree
+
+procedure: 
+- Find the root node, which is the last node of the post-order traversal. 
+- Find the corresponding node in the in-order traversal and partition it into a left and right subtree.
+- Find the middle node of each subtree of the in-order traversal. These are the children of the partition node mentioned above.
+- Partition the subtrees again, repeating the process until a subtree consists of only one node. The tree is finished.
+NOTE: If a subtree has an even number of nodes, check which node appears latest in the post-order traversal. That will be the partition node.
+
+================================================
+
+
+ALGO for PRE-ORDER + POST-ORDER
+------------------------------------------------
+givens: a pre-order traversal and a post-order traversal of the same binary tree
+
+procedure: 
+- Find the root node, which is the first node of the pre-order traversal. 
+- Find the second node of the pre-order traversal. This node is the root of the left subtree. Find this node in the post-order traversal and partition it into a left and right subtree. 
+- Find the next node of the pre-order traversal in the post-order traversal left subtree, which will be the root node. 
+- Partition again into a left and right subtree until the left partition contains 1 node. This is the leftmost node. 
+- Repeat this process for the right subtree of the post-order traversal. However, instead, start with the second to last node of the post-order traversal. Find this node in the pre-order traversal (root node) and partition it into left and right subtrees. Proceed the traversal of the post-order traversal by traversing backwards (third to last node) and so on. 
+================================================
+
+(replicate the algo section above as many times as necessary for distinct algos)
