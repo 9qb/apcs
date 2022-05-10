@@ -1,0 +1,13 @@
+// (P)BNJ -- Brian Li, Nakib Abedin, Jefford Shau
+// APCS pd07
+// HW96 -- BSTs is the Perfect Place for Shade
+// 2022-05-11w
+// Time Spent: 1.0 hrs
+
+
+  DISCOS
+  1. We can code the method for search both recursively and iteratively. Both mehtods yield O(logn)
+
+  QCC
+  1. Were we meant to do the search method recursively or iteratively?
+  2. What are binary search trees useful for?
