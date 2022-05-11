@@ -1,0 +1,25 @@
+(P)BNJ -- Brian Li, Nakib Abedin, Jefford Shau
+APCS pd07
+HW97 - Prune Your Tree
+2022-05-11
+Time Spent: 1.0 hrs + classtime
+
+DISCO
+  * We simplified our remove method into three main cases: leaf nodes, nodes with 1 subtree, and nodes with 2 subtrees.
+  * We used recursion for the case where the node had 2 subtrees.
+QCC
+  * How can we do remove() more recursively? Can this be optimized?
+
+ALGO
+Go to the node preceding the target we plan to remove.
+CASE 1:
+If we are removing a leaf, set the piggyback's left/right node to null.
+  - If the target is the root, set the root to null.
+CASE 2:
+If we are removing a node with only one subtree, the set the piggyback's
+left/right child to the target's left/right child.
+  - If the target is the root, set the root to the target's left/right child.
+CASE 3:
+If we are removing a node with two subtrees, store the value of the rightmost
+leaf of the subtree's left branch and remove that leaf.
+Then, replace the value of the target node with the stored value.
