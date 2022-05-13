@@ -1,0 +1,12 @@
+/*
+(P)BNJ -- Brian Li, Nakib Abedin, Jefford Shau
+APCS pd07
+HW99 - Some Are More Equal Than Others, Codified
+2022-05-13
+Time Spent: 0.2 hrs + classtime
+
+DISCO
+  * If two elements of an ArrayPriorityQueue have the same priority value, we peek and remove the lower-indexed element.
+QCC
+  * How can we improve the time complexity of the remove() method?
+*/
