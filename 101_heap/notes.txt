@@ -1,0 +1,15 @@
+(P)BNJ - Brian Li, Nakib Abedin, Jefford Shau
+APCS pd07
+HW101 -- Heap o' Trouble
+2022-05-16
+time spent: 0.5 hrs
+
+DISCO:
+  * We devised an insertion algo using iteration and a removal algo using recursion.
+  * It is best to add elements in a way that maintains a semi-balanced tree to allow for later accessibility.
+  * We don't need to have a O(log n) search time for a heap because that is not a requirement for the data structure.
+  * Recursive backtracking is a possible way to search for a target element in a heap.
+QCC:
+  * We found it difficult to try to formulate a working algorithm.
+  * What is the proper method to add to a heap?
+  * How can we make our insertion algorithm more efficient (i.e. do it without checking for height and whether a tree is balanced)?

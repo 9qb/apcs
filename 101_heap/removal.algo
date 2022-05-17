@@ -1,0 +1,26 @@
+(P)BNJ - Brian Li, Nakib Abedin, Jefford Shau
+APCS pd07
+HW101 -- Heap o' Trouble
+2022-05-16
+time spent: 0.5 hrs
+
+DISCO:
+  * We devised an insertion algo using iteration and a removal algo using recursion.
+  * It is best to add elements in a way that maintains a semi-balanced tree to allow for later accessibility.
+  * We don't need to have a O(log n) search time for a heap because that is not a requirement for the data structure.
+  * Recursive backtracking is a possible way to search for a target element in a heap.
+QCC:
+  * We found it difficult to try to formulate a working algorithm.
+  * What is the proper method to add to a heap?
+  * How can we make our insertion algorithm more efficient (i.e. do it without checking for height and whether a tree is balanced)?
+
+REMOVAL ALGO:
+1) Use a recursive backtracking approach to finding the item
+      i.e  a) If key is equal to target, have a temp pointer to this node
+           b) If node is a leaf or if key < target, go back to parent node.
+           c) If key not equal to target, go to left branch. Go back to step a.
+           d) If key comes back, go to the right branch. Go back to step a.
+           e) If key reaches here, return -1 (target not in tree)
+2) If the element has no children, remove the element.
+3) If the element has one child, swap the child and element's position. Repeat until the element is at a leaf. Remove and return the element.
+4) If the element has two children, find the largest node between the two children and swap it with the element. Repeat until the element is at a leaf. Remove and return the element.
