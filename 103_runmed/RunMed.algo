@@ -1,0 +1,24 @@
+(P)BNJ -- Brian Li, Nakib Abedin, Jefford Shau
+APCS pd07
+HW103 -- Erica's Friends, Hugo, and The One in the Middle
+2022-05-19r
+Time Spent: 0.5 hrs + classtime
+
+DISCO
+1) Heaps can be used for keeping track of the median
+
+QCC
+1) Since heaps are good at keep track at min/max, could they potentially be useful in creating a sorted collection?
+
+ALGO
+(The same algo as the one on the board during class)
+
+a. if next val < root of maxheap, add to maxheap
+   else add to minheap
+
+b. balance heaps (so that size difference < 2)
+   (remove from larger heap, add to smaller heap)
+
+c. at any time find med by:
+    a) heap sizes equal: med is mean of roots
+    b) heap sizes !equal: med is root of larger heap
